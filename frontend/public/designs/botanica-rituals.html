@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Botanica | Rituales Puros para tu Piel</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d4a3e", // Verde Bosque
+                        "accent": "#ec5b13", // Acento naranja
+                        "beige": "#f5f2ed",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a2420",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 dark:border-white/10 px-6 lg:px-20 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-3xl">eco</span>
+<h1 class="text-xl font-black tracking-tight">BOTANICA</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest">
+<a class="hover:text-accent transition-colors" href="#">Colección</a>
+<a class="hover:text-accent transition-colors" href="#">Rituales</a>
+<a class="hover:text-accent transition-colors" href="#">Nosotros</a>
+<a class="hover:text-accent transition-colors" href="#">Puntos de Venta</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-accent rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative w-full aspect-[21/9] min-h-[500px] flex items-center px-6 lg:px-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-75" data-alt="Paisaje de niebla en bosque tranquilo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO5SHIxBQWRzt2VTJWV2to8l5iV_TBG_8Yb0OQ5_kT7Egg7IwHOI8LSz--aw0mTz_tJlXeEwlZ6qd8QpSMmVkBMRSmjmmSkVbMk59qWL5ze0IXgOKFYLz_aeiSqaI5sAQ9J5XyPt4DS9tAC6znbkdErRC58TMtXH3BqPRnpexwRqfS19UjskemKEiXbg9h0YyfFWRTZ3Fmqylgrqa1OdNmBbHZpmAuxPh09JfJZLgoOv1dcEbcKoEFA2cGq6LizJh86-rHbgXv3KTb"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl text-white">
+<span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold uppercase tracking-widest mb-6">Rituales de Piel Sostenibles</span>
+<h2 class="text-5xl lg:text-7xl font-light leading-tight mb-6">La Esencia del <br/><span class="font-black italic">Bosque Puro</span></h2>
+<p class="text-lg text-white/80 mb-8 max-w-lg leading-relaxed">Vive un viaje sensorial a través de lo salvaje. Nuestros extractos botánicos son cosechados con respeto para traer la calma del bosque a tu rutina diaria.</p>
+<div class="flex gap-4">
+<button class="bg-white text-primary px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-accent hover:text-white transition-all shadow-xl">Comprar Colección</button>
+<button class="border border-white/40 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition-all">Nuestra Historia</button>
+</div>
+</div>
+</section>
+<section class="px-6 lg:px-20 py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h3 class="text-primary dark:text-slate-100 text-3xl font-bold mb-4 uppercase tracking-tighter italic">Nutre tu Piel</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">Nuestra botica combina sabiduría ancestral con ciencia moderna. Cada gota es una infusión concentrada de vitalidad natural.</p>
+</div>
+<a class="text-accent font-bold uppercase text-xs tracking-widest flex items-center gap-2 group" href="#">
+                        Explorar Todo <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-beige rounded-2xl overflow-hidden mb-6 relative shadow-sm group-hover:shadow-2xl transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Frasco de gel de ducha de vidrio ámbar de lujo minimalista" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiqMW5mbLBBQtldBbaDLqVKcdeui23EvAUP0fYDGDkwPl4zWGRvXpO_CazBkx8vKu7jT-7NUWBR2b7EAVz3spwQk7wKquJJ4Yk8Bmmr_GT6ZqmAvnvpxAXjPCEh9siHiCHn1OSi_d4fmXs_klM4NYaMmNX68B6dKKBaWN9XIgNIVdP7egVjvfg92C7Q3HbZJhZE8tRELFoi-6r15KUc1I4wJMMWV9gVulZMZ3LPYSWvbdGRpicn4haEO_n8tAxxXkhjTW6XuyPDPaU"/>
+<button class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold text-xs uppercase tracking-widest text-primary">Agregar Rápido</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors uppercase italic">Gel de Baño Restaurador</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Madera de Cedro y Musgo</p>
+</div>
+<span class="font-black text-primary dark:text-slate-100">$48.00</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-beige rounded-2xl overflow-hidden mb-6 relative shadow-sm group-hover:shadow-2xl transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Frasco de suero de vidrio con ramita botánica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNNcR7HEx6GmSyQnUqOf1bhXElDdlLwkUzMX707CTn27N9Pm026sHQYgYlvG56MNPbZohH3_D6V2y9KeN_SJTzqp_pZlJB8TIfSfeXbK2u6c1qYY5RPqxtrThAflLo4foqAqeh56i85vGeS2-AQzMyC_oLzalaRThwHxNUMofLS2odEQSC2ft5l9QS3tHJe3Wl0A8yv425sTDoVqQyCyRavI7BGnGvrjtTKqDW0UTW23hrM05az5Z-ad5P2-38vYsMOFk8fRZ8pVMq"/>
+<button class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold text-xs uppercase tracking-widest text-primary">Agregar Rápido</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors uppercase italic">Aceite Facial Revitalizante</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Argán y Rosa Mosqueta prensados en frío</p>
+</div>
+<span class="font-black text-primary dark:text-slate-100">$64.00</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-beige rounded-2xl overflow-hidden mb-6 relative shadow-sm group-hover:shadow-2xl transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Barra de jabón minimalista y cepillo de madera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAOAF4kmKU9OARBY3YC1dx-y0DnnCHz4qgjUQWY1ckvUmZf9HCw04rOsQNpug3FLxKgDHGEtSeacKI0kypWWKv-hOL57_pW5yOhfB1jhemgO6UH-dk8Lpza4KdOB8jVVylDeX--CMkP2CSrUtLBHQI7PMkMtlOTq4shsrYkpwakZT7ZVhktEncQF0VxCmyp5W_qfKhgFskmv-noBaZ76IE5hMAlXMbG19jtXPQnVDRmKfWjZGZUNg6lmEGmpOAqCkLB1XaApdNEOgj"/>
+<button class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold text-xs uppercase tracking-widest text-primary">Agregar Rápido</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors uppercase italic">Máscara de Arcilla Purificante</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Helecho Silvestre y Caolín</p>
+</div>
+<span class="font-black text-primary dark:text-slate-100">$32.00</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary text-white py-24 px-6 lg:px-20">
+<div class="max-w-4xl mx-auto text-center mb-20">
+<h2 class="text-4xl font-light mb-6 uppercase tracking-widest italic">¿Por qué Botanica?</h2>
+<div class="w-20 h-0.5 bg-accent mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center group">
+<div class="mb-8 inline-block p-6 rounded-full bg-white/5 border border-white/10 group-hover:bg-accent/20 group-hover:border-accent/40 transition-all">
+<span class="material-symbols-outlined text-4xl text-accent">potted_plant</span>
+</div>
+<h5 class="text-xl font-bold mb-4 uppercase tracking-tighter">Cosecha Silvestre</h5>
+<p class="text-white/60 leading-relaxed font-light">Obtenemos nuestros ingredientes de bosques protegidos, asegurando que cada extracto esté en su punto máximo de potencia.</p>
+</div>
+<div class="text-center group">
+<div class="mb-8 inline-block p-6 rounded-full bg-white/5 border border-white/10 group-hover:bg-accent/20 group-hover:border-accent/40 transition-all">
+<span class="material-symbols-outlined text-4xl text-accent">science</span>
+</div>
+<h5 class="text-xl font-bold mb-4 uppercase tracking-tighter">Química Limpia</h5>
+<p class="text-white/60 leading-relaxed font-light">Libre de fragancias sintéticas, sulfatos y parabenos. Solo las moléculas que tu piel entiende.</p>
+</div>
+<div class="text-center group">
+<div class="mb-8 inline-block p-6 rounded-full bg-white/5 border border-white/10 group-hover:bg-accent/20 group-hover:border-accent/40 transition-all">
+<span class="material-symbols-outlined text-4xl text-accent">recycling</span>
+</div>
+<h5 class="text-xl font-bold mb-4 uppercase tracking-tighter">Mentalidad Zero Waste</h5>
+<p class="text-white/60 leading-relaxed font-light">Desde frascos de vidrio hasta etiquetas compostables, nuestro empaque vuelve a la tierra con la misma gracia que nuestros ingredientes.</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img class="rounded-2xl w-full aspect-[3/4] object-cover shadow-2xl" data-alt="Manos aplicando aceite lujoso en la piel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzzrnSCxIlK_It1xjhoMbTiUazmV6u1LFp-Yd0YTw4MY8JAIxqnY0CGNvmmCRWGfeRrN5OHRleOcoa7iAfqo0K3KtVRqpe9Vjp5_ii-RC4IoFs6DWmfulK9mHJ7pojBLe4u2QOu5GmX6-kWIVYAniAz966wzGb-Kth62_h_h1W8CPj7KAOUesOcWzNPEd8N__EZTg3wOARSzOtIdAq6tlQG-3z4mQPzLYerJsbgVgTP6cZ2DabtKAG7FKzUaPogSx9WmBoo6CT6mi2"/>
+</div>
+<div>
+<img class="rounded-2xl w-full aspect-[3/4] object-cover shadow-2xl" data-alt="Interior de spa con toallas limpias y plantas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBojVL0wMbcKF_kSfDQUWxf0XxB8nRth6uu-D_FCHwUnxdafse6Rju61NUZF_ukT3_ppAUxnLCY0Gn3GQUSfo-gYJIdOFFIHAz3LI2B6HyUItML_5JrRC79ysS6lNhiSB5w-CGzAtMgz-8CKFRu40zOsX7xpsZMuyfcYJgRqpMU_08b5v97Mi8pCMYun-wqB9EsOmBXFUqK4JnbAcLPGNOd4e-pLmSKLjxyviJYAT0pk06KBiP5JQ0Rp2ULWRoghfYxBGGgJOP-3JM0"/>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-5xl font-black text-primary dark:text-slate-100 uppercase italic tracking-tighter leading-[0.9]">La Experiencia de Spa <br/>en Casa.</h2>
+<p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">Transforma tu limpieza diaria en un ritual de conexión. Nuestros aromas están diseñados para reducir el cortisol y conectarte con los ritmos de la naturaleza.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span class="font-medium">Ingredientes 100% Orgánicos Certificados</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span class="font-medium">Testeado Dermatológicamente para Piel Sensible</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-accent">check_circle</span>
+<span class="font-medium">Fórmula Profesional Vegana y Libre de Crueldad</span>
+</li>
+</ul>
+<button class="bg-primary text-white px-10 py-5 rounded-full font-bold uppercase text-xs tracking-[0.2em] shadow-lg hover:bg-accent transition-colors">Comienza tu Ritual</button>
+</div>
+</section>
+</main>
+<footer class="bg-beige dark:bg-background-dark/50 border-t border-primary/10 pt-20 pb-10 px-6 lg:px-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary dark:text-slate-100 mb-6">
+<span class="material-symbols-outlined text-2xl">eco</span>
+<h1 class="text-lg font-black tracking-tight">BOTANICA</h1>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">Nutriendo la piel y el alma a través del poder intencional de la ciencia botánica. Únete a nuestro viaje hacia el lujo sostenible.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-accent hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="font-black uppercase text-xs tracking-widest mb-6">Tienda</h6>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-accent" href="#">Todos los Productos</a></li>
+<li><a class="hover:text-accent" href="#">Más Vendidos</a></li>
+<li><a class="hover:text-accent" href="#">Sets de Regalo</a></li>
+<li><a class="hover:text-accent" href="#">Novedades</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-black uppercase text-xs tracking-widest mb-6">Soporte</h6>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-accent" href="#">Política de Envío</a></li>
+<li><a class="hover:text-accent" href="#">Devoluciones y Cambios</a></li>
+<li><a class="hover:text-accent" href="#">Preguntas Frecuentes</a></li>
+<li><a class="hover:text-accent" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-black uppercase text-xs tracking-widest mb-6">Boletín</h6>
+<p class="text-sm text-slate-500 mb-6">Suscríbete para recibir rituales botánicos y actualizaciones exclusivas.</p>
+<form class="flex border-b border-primary/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 w-full text-sm" placeholder="Correo Electrónico" type="email"/>
+<button class="text-accent uppercase text-xs font-black tracking-widest" type="submit">Unirse</button>
+</form>
+</div>
+</div>
+<div class="border-t border-primary/5 pt-10 flex flex-col md:flex-row justify-between gap-6 text-xs text-slate-400 uppercase tracking-widest font-bold">
+<p>© 2024 Botanica Skin Rituals. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a href="#">Privacidad</a>
+<a href="#">Términos</a>
+<a href="#">Accesibilidad</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

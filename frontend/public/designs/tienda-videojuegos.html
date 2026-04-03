@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEON VAULT | Digital Game Emporium</title>
+<!-- Tailwind CSS CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration for Cyberpunk Theme -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              black: '#050505',
+              dark: '#0a0a0c',
+              neon: '#00f2ff',
+              magenta: '#ff00ff',
+              yellow: '#f3e600',
+              purple: '#7000ff'
+            }
+          },
+          boxShadow: {
+            'neon-blue': '0 0 15px rgba(0, 242, 255, 0.5)',
+            'neon-magenta': '0 0 15px rgba(255, 0, 255, 0.5)',
+            'inner-cyber': 'inset 0 0 10px rgba(0, 242, 255, 0.2)'
+          },
+          fontFamily: {
+            'display': ['Orbitron', 'sans-serif'],
+            'body': ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-animations">
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+    .scanline-effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, rgba(0, 242, 255, 0.1), transparent);
+      animation: scanline 8s linear infinite;
+      pointer-events: none;
+    }
+    .cyber-clip {
+      clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    }
+    .glitch-hover:hover {
+      text-shadow: 2px 0 #ff00ff, -2px 0 #00f2ff;
+    }
+  </style>
+<style data-purpose="layout-utility">
+    body {
+      background-color: #050505;
+      color: #e0e0e0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-cyber { font-family: 'Orbitron', sans-serif; }
+  </style>
+</head>
+<body class="bg-cyber-black selection:bg-cyber-magenta selection:text-white">
+<!-- BEGIN: Navigation -->
+<nav class="fixed top-0 w-full z-50 border-b border-cyber-neon/20 bg-cyber-black/80 backdrop-blur-md" data-purpose="main-navigation">
+<div class="max-center px-6 py-4 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<div class="w-10 h-10 bg-cyber-neon rounded-sm rotate-45 flex items-center justify-center shadow-neon-blue">
+<span class="text-cyber-black font-black -rotate-45 text-xl">NV</span>
+</div>
+<span class="font-cyber font-black text-2xl tracking-tighter text-white">NEON<span class="text-cyber-neon">VAULT</span></span>
+</div>
+<div class="hidden md:flex space-x-8 font-cyber text-sm tracking-widest">
+<a class="hover:text-cyber-neon transition-colors border-b-2 border-transparent hover:border-cyber-neon py-1" href="#">STORE</a>
+<a class="hover:text-cyber-magenta transition-colors border-b-2 border-transparent hover:border-cyber-magenta py-1" href="#">HARDWARE</a>
+<a class="hover:text-cyber-yellow transition-colors border-b-2 border-transparent hover:border-cyber-yellow py-1" href="#">COMMUNITY</a>
+<a class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white py-1" href="#">SUPPORT</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-cyber-neon hover:bg-cyber-neon/10 rounded-full transition-all">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="px-6 py-2 bg-transparent border border-cyber-magenta text-cyber-magenta font-cyber text-xs hover:bg-cyber-magenta hover:text-white transition-all shadow-neon-magenta cyber-clip">
+          LOGIN_SESSION
+        </button>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-16" data-purpose="hero-banner">
+<!-- Background Elements -->
+<div class="absolute inset-0 z-0">
+<img alt="Cyberpunk background" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO36ozjFf_gHw7OwFetLL9FBlXP267J_c7YLuzEH_PqXZTWIFkgsvj3cuxl3oMOm8rMSOXEvmHqzDBFiMY6Phchc7I5Jlv4VM_b-SPzSOPX97EaJZcdxtUAfLd9aw81UCeMrz8kVjyGDMOZmLHZ0z124mQS_C3GaP0xJbMe8BT5RgHlMzN3wnxMaHU6C5zEYqZIJGwE5QPqY0k_Te5iOJjY2mmeqmVUNVg0-sLBYyAFK5Pj7yX9_nelGyD5Wixe5fnbj9mVFEDWmE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-cyber-black"></div>
+<div class="scanline-effect"></div>
+</div>
+<!-- Hero Content -->
+<div class="container mx-auto px-6 z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-block px-3 py-1 border border-cyber-neon text-cyber-neon text-[10px] tracking-[0.3em] font-cyber uppercase mb-4">
+          Incoming Transmission: New Release
+        </div>
+<h1 class="text-6xl md:text-8xl font-cyber font-black text-white leading-none">
+          LEVEL <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-neon to-cyber-magenta">BEYOND</span>
+</h1>
+<p class="text-gray-400 text-lg max-w-lg leading-relaxed border-l-2 border-cyber-neon pl-4">
+          The grid has evolved. Access the latest AAA titles, underground indie gems, and legacy artifacts in the sector's most advanced digital repository.
+        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-10 py-4 bg-cyber-neon text-cyber-black font-cyber font-bold text-sm tracking-widest hover:scale-105 transition-transform cyber-clip shadow-neon-blue">
+            ENTER_VAULT
+          </button>
+<button class="px-10 py-4 border border-white/20 text-white font-cyber font-bold text-sm tracking-widest hover:bg-white/10 transition-all cyber-clip">
+            VIEW_TRAILER
+          </button>
+</div>
+</div>
+<!-- Featured Character Art -->
+<div class="relative hidden md:block">
+<div class="absolute -inset-10 bg-cyber-magenta/20 blur-[100px] rounded-full"></div>
+<img alt="Featured Game Character" class="relative z-10 w-full h-auto drop-shadow-[0_0_30px_rgba(0,242,255,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPzYQ8xEujxcY_xAH8De2Yr54d9_KYvD5G1uaCkz-9t9gruPQiyWaZmdv8e6tletKz4dp5CmzkdystT94HiqaHcnSzSA29xXerkH1TJLYQcxRr2ceLRHmpXUUr-6KXTJezWdis3MKNJDsv6yMwe2nW3A4pUaMEivWBDQwIFW0YvDcttZCsusgF1AlcOtKrqq9YRkl1wM3kJxiqUL0a8oPlcGFB0Tctvp00YBig6Ng6VKlnUXcecq2hInAPl_NEhVvm2vXP_VIB7II"/>
+<!-- Floating HUD elements -->
+<div class="absolute top-10 right-0 p-4 border border-cyber-neon/30 bg-cyber-black/40 backdrop-blur-sm font-cyber text-[10px] space-y-2">
+<div class="flex justify-between gap-8"><span>FPS_LOCKED:</span> <span class="text-cyber-neon">144.0</span></div>
+<div class="flex justify-between gap-8"><span>LATENCY:</span> <span class="text-cyber-neon">12ms</span></div>
+<div class="w-full bg-gray-800 h-1"><div class="bg-cyber-neon w-3/4 h-full"></div></div>
+</div>
+</div>
+</div>
+<!-- Decorative bottom bar -->
+<div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyber-neon to-transparent opacity-50"></div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Trending Games Grid -->
+<section class="py-24 bg-cyber-dark relative" data-purpose="trending-grid">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="text-cyber-neon font-cyber text-4xl font-black italic tracking-tighter">HOT_DATA_STREAMS</h2>
+<div class="h-1 w-32 bg-cyber-magenta mt-2"></div>
+</div>
+<div class="flex gap-4">
+<button class="p-2 border border-cyber-neon/30 text-cyber-neon hover:bg-cyber-neon/10">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="p-2 border border-cyber-neon/30 text-cyber-neon hover:bg-cyber-neon/10">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Game Card 1 -->
+<div class="group relative bg-cyber-black border border-white/10 hover:border-cyber-neon transition-all duration-500 overflow-hidden" data-purpose="game-card">
+<div class="relative h-64 overflow-hidden">
+<img alt="Game Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtbI9NGJXqTPXr8I5kwonAgRiOCw8jHsPNSZly_7ipGVdEQgdj5Tk1cONIlYiiDYE7Nda7aInR9d_yzDn10CIuXMEMCsfbEo-1mxvnK_ZRDrhYFYyPcM4eROFXaZN51qiSVLQdHkoRuJKq0jo-x32eLKIJG9H-jnaJEe0mysvHfT5oJ-XbmTHJpvMRr8KeQ6PSjj4I8YD2Rebgz59DEjFOEB6zfQdOTogfTovD_D8ZJm3Mm1v-0rI9ywHjPZ8fYmSZjpG3y68PZqE"/>
+<div class="absolute top-3 right-3 bg-cyber-black/80 px-2 py-1 text-cyber-yellow font-cyber text-[10px] border border-cyber-yellow/50">
+              -25% OFF
+            </div>
+</div>
+<div class="p-6 relative">
+<!-- Background glow on hover -->
+<div class="absolute inset-0 bg-cyber-neon/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<h3 class="font-cyber font-bold text-lg mb-2 group-hover:text-cyber-neon transition-colors italic">CYBER_REVENANT</h3>
+<div class="flex justify-between items-center text-xs text-gray-400 font-cyber">
+<span>ACTION / RPG</span>
+<span class="text-white font-bold">$44.99</span>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 border border-white/10 text-[10px] font-cyber tracking-widest hover:bg-cyber-magenta hover:text-white transition-all uppercase">
+              Add to Rig
+            </button>
+</div>
+</div>
+<!-- Game Card 2 -->
+<div class="group relative bg-cyber-black border border-white/10 hover:border-cyber-magenta transition-all duration-500 overflow-hidden" data-purpose="game-card">
+<div class="relative h-64 overflow-hidden">
+<img alt="Game Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKa2_8EO7hQ_HlfVZEbuBYoNSb5m9gkft7FTIYpnMgh1uUAHE6pxGVyLoOThY6CCnk7jzbsvyTODnRE3iOVSKeEik7d_gjTw0FaSPXrHwKTJOkwGBWLACLUGsnUdBG_dfBIbMGgodpSjGF9-xSkWHnIv8xVGxQdXcuwl2zYVerYWNwAfguG9ctqJc3RdiPO7HNba8YkrwpTAGI5yjHwOtjJgSgBaoK7Se_h1VNb4oKRAu0HoC_o1rkOdxgNxg-9UvWWRo74uhHLsU"/>
+</div>
+<div class="p-6 relative">
+<div class="absolute inset-0 bg-cyber-magenta/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<h3 class="font-cyber font-bold text-lg mb-2 group-hover:text-cyber-magenta transition-colors italic">NEON_DRIFTER</h3>
+<div class="flex justify-between items-center text-xs text-gray-400 font-cyber">
+<span>RACING / SIM</span>
+<span class="text-white font-bold">$29.99</span>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 border border-white/10 text-[10px] font-cyber tracking-widest hover:bg-cyber-neon hover:text-cyber-black transition-all uppercase">
+              Add to Rig
+            </button>
+</div>
+</div>
+<!-- Game Card 3 -->
+<div class="group relative bg-cyber-black border border-white/10 hover:border-cyber-yellow transition-all duration-500 overflow-hidden" data-purpose="game-card">
+<div class="relative h-64 overflow-hidden">
+<img alt="Game Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTJ0kHF-X0Rdcvcviys4vAs6CR2OCPKVPKbIJKWknLtNSCrOdReVFqliOkQlWsUqOkb4ZXDhX3vQ8hdX0p6b0V-clj_138E8Soh4CprXaUO6EhoSFHzfan2C6LVyizV_4O2xSMD_Qbg_LVRJ7GgTa3k-5-HoVezPWLAaaTlaNtuh3WGB13JmPS9WFCp9Td7TTfXA6BvAN4-ugqh_BSfbvXA5SuKnvi57l4mpLOcvqM9z82OpeydaPUhwd-Y5TRfwemsKv_hakFf00"/>
+</div>
+<div class="p-6 relative">
+<div class="absolute inset-0 bg-cyber-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<h3 class="font-cyber font-bold text-lg mb-2 group-hover:text-cyber-yellow transition-colors italic">SYSTEM_BREACH</h3>
+<div class="flex justify-between items-center text-xs text-gray-400 font-cyber">
+<span>STRATEGY / HACK</span>
+<span class="text-white font-bold">$19.99</span>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 border border-white/10 text-[10px] font-cyber tracking-widest hover:bg-cyber-yellow hover:text-black transition-all uppercase">
+              Add to Rig
+            </button>
+</div>
+</div>
+<!-- Game Card 4 -->
+<div class="group relative bg-cyber-black border border-white/10 hover:border-cyber-purple transition-all duration-500 overflow-hidden" data-purpose="game-card">
+<div class="relative h-64 overflow-hidden">
+<img alt="Game Cover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpGiA9in7FeZFlB-MLSnnuUofgpNSjW5Na0c_x4I5BvD27MJAb9veqBakEiKxF3DQD2FMUZ31LH_xKdzqD0p5dCAPcXd5KicszYSur7X8kurHavAGwDqTs7_95W4Smrq57W-vJka3ECt_hYc7zq5sr5mPanh4qre01VZE658ECWsjw-c-eGo3FxtGeSdCIVNDKAvGvcMGW1B7NCC9MR_lIjEnHYqYSTiA84O-MT6Lg8-qhz84G3Zg1Ofsl2-NZuUvFmhYaw-zKhHo"/>
+<div class="absolute top-3 right-3 bg-cyber-black/80 px-2 py-1 text-cyber-neon font-cyber text-[10px] border border-cyber-neon/50 uppercase">
+              Pre-Order
+            </div>
+</div>
+<div class="p-6 relative">
+<div class="absolute inset-0 bg-cyber-purple/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<h3 class="font-cyber font-bold text-lg mb-2 group-hover:text-cyber-purple transition-colors italic">VOID_WALKER</h3>
+<div class="flex justify-between items-center text-xs text-gray-400 font-cyber">
+<span>HORROR / FPS</span>
+<span class="text-white font-bold">$59.99</span>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 border border-white/10 text-[10px] font-cyber tracking-widest hover:bg-cyber-purple hover:text-white transition-all uppercase">
+              Secure License
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Trending Games Grid -->
+<!-- BEGIN: Interactive Specs Section -->
+<section class="py-24 bg-cyber-black relative border-y border-cyber-neon/10" data-purpose="hardware-promo">
+<div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute -inset-4 border border-cyber-neon/30 animate-pulse"></div>
+<img alt="Gaming Hardware" class="relative z-10 w-full rounded shadow-neon-blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq5RhbTIp6366TtAfd0cSEg25Vi7goEvg1qIMlkqq9ShTPvlLfDDWL9fWqvajsm5ah6c1Nohbz6nnjwGQbyhCCFcMf7QeA6zeIbrFyHtUpeKa53RxCsoZXwSU6rU2pnAMKsrK1qLH3_ey1-mFC8Rh5Vj8HmB51nqN2LS9Z37peEMOMXa3fGFodaIBWiAJsirKNSn0XMeVCptw8T5fqImil9q47h-Jx7acREVsNZAxgeONayfC_94a4FZHTDgd2mvyQVG3YZf3v8QI"/>
+<!-- Floating overlay specs -->
+<div class="absolute -bottom-6 -right-6 p-6 bg-cyber-black border border-cyber-magenta shadow-neon-magenta z-20">
+<p class="font-cyber text-cyber-magenta text-xs mb-1 uppercase">Recommended Core</p>
+<p class="font-cyber font-bold text-xl text-white">NEURAL_LINK X9</p>
+</div>
+</div>
+<div class="space-y-8 order-1 lg:order-2">
+<h2 class="text-5xl font-cyber font-black text-white leading-tight">HARDWARE <br/><span class="text-cyber-magenta">SYNC</span> REQUIRED</h2>
+<p class="text-gray-400 leading-relaxed italic">
+          High-performance rigs demand precision-tuned peripherals. Explore our exclusive line of hardware designed for zero-latency gameplay.
+        </p>
+<ul class="space-y-4 font-cyber text-sm tracking-wider">
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 bg-cyber-neon"></span> 1000HZ POLLING RATE PERIPHERALS
+          </li>
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 bg-cyber-magenta"></span> LIQUID-COOLED NEURAL ENGINES
+          </li>
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 bg-cyber-yellow"></span> PHOTON-EMISSIVE DISPLAYS
+          </li>
+</ul>
+<button class="group relative px-8 py-4 overflow-hidden">
+<div class="absolute inset-0 bg-cyber-magenta translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300"></div>
+<span class="relative z-10 font-cyber font-bold text-sm text-white border border-cyber-magenta px-8 py-4 group-hover:border-transparent">UPGRADE_HARDWARE</span>
+</button>
+</div>
+</div>
+</section>
+<!-- END: Interactive Specs Section -->
+<!-- BEGIN: Newsletter / Footer -->
+<footer class="bg-cyber-dark pt-24 pb-12 border-t border-white/5" data-purpose="site-footer">
+<div class="container mx-auto px-6">
+<!-- Newsletter -->
+<div class="mb-24 p-12 bg-cyber-black border border-cyber-neon/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-cyber-neon/5 rounded-full -mr-32 -mt-32"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-md">
+<h3 class="font-cyber text-2xl font-black text-white mb-2 italic underline decoration-cyber-neon">SUBSCRIBE_TO_SIGNAL</h3>
+<p class="text-gray-500 text-sm">Join 500k+ operators. Receive weekly patch notes, discount codes, and early access keys.</p>
+</div>
+<div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
+<input class="bg-transparent border border-white/20 px-6 py-3 font-cyber text-xs text-white focus:outline-none focus:border-cyber-neon min-w-[300px]" placeholder="USER_EMAIL@DOMAIN.COM" type="email"/>
+<button class="bg-cyber-neon text-cyber-black font-cyber font-bold px-8 py-3 hover:shadow-neon-blue transition-all">LINK_START</button>
+</div>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-24">
+<div>
+<h4 class="font-cyber text-cyber-neon text-xs mb-6 tracking-widest uppercase">Navigation</h4>
+<ul class="space-y-3 text-gray-500 text-sm font-cyber">
+<li><a class="hover:text-white" href="#">STORE_FRONT</a></li>
+<li><a class="hover:text-white" href="#">TOP_CHARTS</a></li>
+<li><a class="hover:text-white" href="#">NEW_DROPS</a></li>
+<li><a class="hover:text-white" href="#">COMING_SOON</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-cyber text-cyber-magenta text-xs mb-6 tracking-widest uppercase">Support</h4>
+<ul class="space-y-3 text-gray-500 text-sm font-cyber">
+<li><a class="hover:text-white" href="#">KNOWLEDGE_BASE</a></li>
+<li><a class="hover:text-white" href="#">ACCOUNT_SECURITY</a></li>
+<li><a class="hover:text-white" href="#">ORDER_HISTORY</a></li>
+<li><a class="hover:text-white" href="#">REFUND_POLICY</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-cyber text-cyber-yellow text-xs mb-6 tracking-widest uppercase">Connect</h4>
+<ul class="space-y-3 text-gray-500 text-sm font-cyber">
+<li><a class="hover:text-white" href="#">DISCORD_SERVER</a></li>
+<li><a class="hover:text-white" href="#">X_FEED</a></li>
+<li><a class="hover:text-white" href="#">TRANSMISSION_LOGS</a></li>
+<li><a class="hover:text-white" href="#">DEV_BLOG</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-end">
+<div class="text-right">
+<div class="font-cyber font-black text-2xl text-white">NEON<span class="text-cyber-neon">VAULT</span></div>
+<p class="text-gray-600 text-[10px] font-cyber mt-2 tracking-tighter">EST_2088 // SECTOR_07</p>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-cyber tracking-widest text-gray-600">
+<p>© 2024 NEON VAULT DIGITAL CORP. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="hover:text-cyber-neon" href="#">PRIVACY_PROTOCOL</a>
+<a class="hover:text-cyber-neon" href="#">TERMS_OF_SERVICE</a>
+<a class="hover:text-cyber-neon" href="#">LICENSE_AGREEMENT</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Newsletter / Footer -->
+<!-- BEGIN: Floating Interactive Elements -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4" data-purpose="sticky-actions">
+<button class="w-12 h-12 bg-cyber-black border border-cyber-neon rounded-full flex items-center justify-center text-cyber-neon hover:bg-cyber-neon hover:text-cyber-black transition-all shadow-neon-blue">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- END: Floating Interactive Elements -->
+</body></html>

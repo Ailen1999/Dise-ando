@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FiestaMagic | ¡Los Mejores Artículos de Fiesta y Alegría!</title>
+<!-- BEGIN: External Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            partyPink: '#FF007A',
+            partyYellow: '#FFD700',
+            partyPurple: '#8A2BE2',
+            partyCyan: '#00FFFF',
+            partyOrange: '#FF4500'
+          },
+          animation: {
+            'bounce-slow': 'bounce 3s infinite',
+            'spin-slow': 'spin 8s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: External Scripts -->
+<!-- BEGIN: Custom Typography & Layout Styles -->
+<style data-purpose="custom-fonts">
+    @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Luckiest+Guy&family=Poppins:wght@400;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      background-color: #1a1a1a; /* Dark background to make neon colors pop */
+    }
+
+    .font-party {
+      font-family: 'Luckiest Guy', cursive;
+    }
+
+    .font-bungee {
+      font-family: 'Bungee', cursive;
+    }
+
+    .confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 50;
+    }
+  </style>
+<style data-purpose="decorations">
+    .balloon-cluster {
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+    }
+    .gradient-text {
+      background: linear-gradient(45deg, #FF007A, #FFD700, #00FFFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-zoom:hover img {
+      transform: scale(1.1) rotate(3deg);
+    }
+  </style>
+<!-- END: Custom Typography & Layout Styles -->
+</head>
+<body class="text-white">
+<!-- Canvas for Confetti Effect -->
+<canvas class="confetti-canvas" data-purpose="background-animation" id="confetti"></canvas>
+<!-- BEGIN: Header -->
+<header class="sticky top-0 z-40 bg-partyPurple/90 backdrop-blur-md border-b-4 border-partyYellow py-4 px-6 shadow-2xl">
+<div class="max-container mx-auto flex flex-wrap justify-between items-center">
+<!-- Logo Area -->
+<div class="flex items-center gap-2 transform hover:scale-110 transition-transform cursor-pointer">
+<div class="bg-partyPink p-2 rounded-full border-2 border-white animate-bounce-slow">
+<span class="text-2xl">🎉</span>
+</div>
+<h1 class="text-3xl font-party tracking-wider text-white drop-shadow-lg">FIESTA<span class="text-partyCyan">MAGIC</span></h1>
+</div>
+<!-- Navigation -->
+<nav class="hidden md:flex gap-8 font-bungee text-sm">
+<a class="hover:text-partyYellow transition-colors" href="#">Ver Todo</a>
+<a class="hover:text-partyCyan transition-colors" href="#">Temáticas</a>
+<a class="hover:text-partyPink transition-colors" href="#">Globos</a>
+<a class="hover:text-partyOrange transition-colors" href="#">¡Ofertas!</a>
+</nav>
+<!-- CTA & Cart -->
+<div class="flex items-center gap-4">
+<button class="bg-partyYellow text-black px-6 py-2 rounded-full font-bungee hover:bg-white transition-all transform hover:-rotate-2">
+          ¡Que Empiece la Fiesta!
+        </button>
+<div class="relative p-2 bg-white/10 rounded-lg cursor-pointer">
+          🛒 <span class="absolute -top-2 -right-2 bg-partyPink text-[10px] px-1.5 rounded-full border border-white">3</span>
+</div>
+</div>
+</div>
+</header>
+<!-- END: Header -->
+<!-- BEGIN: Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-partyPurple via-slate-900 to-black">
+<!-- Decorative Balloons (Absolute Positioned) -->
+<div class="absolute top-20 left-10 animate-float opacity-80 hidden lg:block">
+<img alt="Globo Rosa" class="balloon-cluster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3BvS2hkV0b4YUU9HkTqC6vEDWPHyN1zlauo0nPtx8J6R1-N8KcTtmHS3uTVd4EjEDok9kHoVpLgFjVp0zqRheQ52ljddN5pSKq08iW5JwUdqQDRre234jADf4a32IYO4g57FVJhPV2jDTlGe9MmedhDr2VHrMdstKo8CIM1YXxtp5JqGpSnDytBDW3YF-TzvVtqS131PxTEevIQkjJu47LUQLHa3Kkt1R1RyWcmzn8YUe-TDIB3Mdo267-lfbwswl2gqGKN6NfgA"/>
+</div>
+<div class="absolute bottom-20 right-10 animate-float opacity-80 hidden lg:block" style="animation-delay: 1s;">
+<img alt="Globo Azul" class="balloon-cluster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLRFfyu2ZZ6QIfePAJJb-5aIwGGaTHgVwG_qT4BtcLLDoQjnOFrhZyqT9tnW-nmTbmq1TgZl0qRci6fl-4MNLAVTODQehuR7cECG1mEuZNYPkM86wgitGZ9IFcvsyy4QWjsReGFr_hurRxoDsVuKJDvKj_ZSFVmPyfMx7bQJ_e_FuF1xE0OMej-w_UUdm5qk3IuGPBjEKPcvPpbiFLF9doe4M9qiLysNifYEpsKLCXco6NFM1M-cd8duAwP6VcBttaW-M5hLCHFVc"/>
+</div>
+<div class="absolute top-1/4 right-20 animate-spin-slow opacity-30">
+<img alt="Estrella Brillante" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Oz8Yw7hlJI7-MC5BXfLSiBEx9TE02c-JtRHEsyuOKtw6sY8QWnLjn7b1ORjJOh2NuXAf3GP8oNe0Wi2fJye0G8QRQAiMBUYVx3A7X2t-fkxcL3AVFjIAHgDAYVh6zLU76qyOe9_oL6XxrhN0OBZqRLM3Eanab-aB3xD1Zj-2QqMHs7pCk8JavR_fG6MmVzH4G7_OIQ1ip60chl8kDr_VwiaUGXKvYTJ_0rVoMabg2_Mv-BganIsl0zkYrIvJxaTtFkWm7FghDwI"/>
+</div>
+<div class="container mx-auto px-6 relative z-10 text-center">
+<h2 class="text-6xl md:text-9xl font-party mb-6 leading-tight drop-shadow-[0_10px_10px_rgba(255,0,122,0.5)]">
+        HAZ QUE CADA <br/>
+<span class="gradient-text">MOMENTO EXPLOTE!</span>
+</h2>
+<p class="text-xl md:text-2xl font-semibold mb-10 max-w-2xl mx-auto text-partyCyan bg-black/40 p-4 rounded-xl border-2 border-dashed border-partyCyan">
+        Desde cumpleaños salvajes hasta soirées elegantes, ¡traemos la magia, el brillo y mucha diversión!
+      </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-partyPink text-white text-2xl px-10 py-5 rounded-2xl font-party hover:scale-110 transition-transform shadow-[0_0_30px_rgba(255,0,122,0.6)] border-4 border-white">
+          COMPRAR DECORACIÓN
+        </button>
+<button class="bg-transparent text-white text-2xl px-10 py-5 rounded-2xl font-party hover:bg-white hover:text-black transition-all border-4 border-partyYellow">
+          VER TEMÁTICAS
+        </button>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Featured Categories -->
+<section class="py-24 bg-white text-slate-900 relative">
+<!-- Jagged Border Top -->
+<div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-[99%]">
+<svg class="relative block w-full h-[100px] fill-white" preserveaspectratio="none" viewbox="0 0 1200 120">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+</svg>
+</div>
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h3 class="text-5xl font-party text-partyPurple inline-block relative">
+          COMPRA POR ESTILO
+          <div class="h-2 bg-partyYellow w-full mt-2 rounded-full"></div>
+</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Category Card 1 -->
+<div class="group relative overflow-hidden rounded-3xl bg-partyPink p-2 transform hover:-rotate-3 transition-transform" data-purpose="category-card">
+<div class="bg-white rounded-[2rem] overflow-hidden h-full flex flex-col items-center p-6 card-zoom">
+<img alt="Artículos de cumpleaños" class="w-full h-48 object-cover rounded-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfS93uSswTw-5HrvUs88p5riGzoplnI79A81Jhb6HHOBCSbNltBSYDLRvnUxymCMiNMghuHrT5lOnayWWxLSB94b60YwuoVe_00TZKd5uvextGXg1TdFCTXnjKH5DbQHefHNb_lVuYtjHuBpnfhyPt0cxYJfyNqUw3ZS39kh30zHwjBA5SV7lQg4qSINCttpBFNYlX-LDyNPdgExmlxf1W-kvRJn-2xSkVSy2-sPrnY9gyTb0zrElMCNK3JCdq0h8sSzLDhrzNdJ4"/>
+<h4 class="font-bungee text-2xl mt-6 text-partyPink">CUMPLEAÑOS</h4>
+<p class="text-center text-sm font-medium mt-2">¡Diseños increíbles para todas las edades!</p>
+</div>
+</div>
+<!-- Category Card 2 -->
+<div class="group relative overflow-hidden rounded-3xl bg-partyCyan p-2 transform hover:rotate-3 transition-transform" data-purpose="category-card">
+<div class="bg-white rounded-[2rem] overflow-hidden h-full flex flex-col items-center p-6 card-zoom">
+<img alt="Artículos para bodas" class="w-full h-48 object-cover rounded-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNPo60RAqN4hnVMIjm8RvAhUzc6yvklpB_lkoNZ7FSIEK_Y7zvJPo2wVdHhW0KJbl9z_66FhAkylwpCSvU6k5DB_4eIWcaXYCeLuKQoCH0-I32WDNItxIurarMmcD8HqxJDFBcvYI_jiRVQ80y6CYQLPEwqKQ2HTnhrJOedZtX3SgVFZYHiX5vgzFwSqIia1PV_D_vH2qBq2GpaL9gTvOpkRcQBMrIdyCrSagqVXGnGkaJi1Jse_PFGPsu6DY_fJptw4cg3hVCsfk"/>
+<h4 class="font-bungee text-2xl mt-6 text-partyCyan">BODAS</h4>
+<p class="text-center text-sm font-medium mt-2">Chispas elegantes y decoraciones.</p>
+</div>
+</div>
+<!-- Category Card 3 -->
+<div class="group relative overflow-hidden rounded-3xl bg-partyYellow p-2 transform hover:-rotate-3 transition-transform" data-purpose="category-card">
+<div class="bg-white rounded-[2rem] overflow-hidden h-full flex flex-col items-center p-6 card-zoom">
+<img alt="Fiesta infantil" class="w-full h-48 object-cover rounded-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_rCPjqUhy-l2vBrnLn7fTooFonmi2FSnHk9-gDIQY2DbTj8UYGwCNuIfupQ1o_dAbZWcyJz2Km7Iu0m87DCePM1WtSLSan7MgFvrCE6kmK_yta1cjk2VK5BTxE3LY6FQm9exXbtYx-9ul0eecFIepGGBAzCVIdghtwZHW3djCIjOHx_eqetBwds_0mDTzrJnDrn1pxRPNj9RzDVSFd7mDD2OC5HkIl3yCIu-NW4v3wGTyeHfCRwKuufSDf1FycOb-zLhH31pAIsU"/>
+<h4 class="font-bungee text-2xl mt-6 text-slate-800">NIÑOS</h4>
+<p class="text-center text-sm font-medium mt-2">Personajes divertidos y coloridos.</p>
+</div>
+</div>
+<!-- Category Card 4 -->
+<div class="group relative overflow-hidden rounded-3xl bg-partyPurple p-2 transform hover:rotate-3 transition-transform" data-purpose="category-card">
+<div class="bg-white rounded-[2rem] overflow-hidden h-full flex flex-col items-center p-6 card-zoom">
+<img alt="Fiesta neón" class="w-full h-48 object-cover rounded-2xl transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc2F5zr8dyTWJv612w1smM4axNvlSc26IE8z4nQh2vlVsYzqMg3VHfo3pCE7AoO5FqqfdG0MX0HPRYwE5gBg37tKkV5XsM5AEMQk_Exvm7yFDpHP1oJCAQ7OPQ3owlMZJeFg-xcnlEEcRdNVuuPOl6dALZhmqCIjqYAfL1IOrsag17w4zaVMlQLV5kCfuAMHGgV1crcgOCs0DR6sNEfwd38Dz8NarjzP2FPThClOarY8oE3TKN7KUbhPs8_7Pnp6oo0A08bK38Tqo"/>
+<h4 class="font-bungee text-2xl mt-6 text-partyPurple">GLOW PARTY</h4>
+<p class="text-center text-sm font-medium mt-2">¡Ilumina la noche oscura!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Featured Categories -->
+<!-- BEGIN: Interactive Banner -->
+<section class="py-20 bg-partyOrange overflow-hidden">
+<div class="flex whitespace-nowrap animate-marquee font-bungee text-7xl text-white opacity-20 select-none">
+<span class="mx-8">CONFITE!</span>
+<span class="mx-8">PASTEL!</span>
+<span class="mx-8">MÚSICA!</span>
+<span class="mx-8">BAILE!</span>
+<span class="mx-8">SONRISAS!</span>
+<span class="mx-8">PIÑATAS!</span>
+<span class="mx-8">CONFITE!</span>
+<span class="mx-8">PASTEL!</span>
+<span class="mx-8">MÚSICA!</span>
+</div>
+<div class="container mx-auto px-6 -mt-12 relative z-10">
+<div class="bg-black p-12 rounded-[4rem] border-8 border-partyYellow flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="md:w-1/2">
+<h2 class="text-5xl font-party text-partyYellow mb-6">BARRA DE GLOBOS</h2>
+<p class="text-xl mb-8">¡Diseña tu propio ramo online y te lo llevamos inflado a tu puerta! Elige entre más de 500 colores y formas.</p>
+<button class="bg-partyCyan text-black px-12 py-4 rounded-xl font-party text-2xl hover:bg-white transition-colors">
+            EMPIEZA A DISEÑAR
+          </button>
+</div>
+<div class="md:w-1/2 flex justify-center">
+<div class="relative w-64 h-64 bg-partyPurple rounded-full flex items-center justify-center animate-pulse">
+<span class="text-9xl">🎈</span>
+<div class="absolute -top-4 -right-4 bg-white text-black p-3 rounded-full font-bold rotate-12">¡NUEVO!</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Interactive Banner -->
+<!-- BEGIN: Footer -->
+<footer class="bg-slate-900 pt-20 pb-10 px-6 border-t-8 border-partyPink">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<h2 class="text-3xl font-party text-white">FIESTA<span class="text-partyPink">MAGIC</span></h2>
+<p class="text-slate-400">La tienda de artículos para fiestas más colorida del mundo. Creemos que la vida es una celebración que merece ser decorada.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 bg-partyPink rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">FB</div>
+<div class="w-10 h-10 bg-partyCyan rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">IG</div>
+<div class="w-10 h-10 bg-partyYellow rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">TK</div>
+</div>
+</div>
+<div>
+<h4 class="font-bungee text-partyYellow mb-6">Información</h4>
+<ul class="space-y-3 text-slate-300">
+<li><a class="hover:text-white" href="#">Envíos</a></li>
+<li><a class="hover:text-white" href="#">Sucursales</a></li>
+<li><a class="hover:text-white" href="#">Ventas por Mayor</a></li>
+<li><a class="hover:text-white" href="#">Eco-Friendly</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bungee text-partyCyan mb-6">Categorías</h4>
+<ul class="space-y-3 text-slate-300">
+<li><a class="hover:text-white" href="#">Disfraces</a></li>
+<li><a class="hover:text-white" href="#">Vajilla</a></li>
+<li><a class="hover:text-white" href="#">Piñatas</a></li>
+<li><a class="hover:text-white" href="#">Luces y Efectos</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bungee text-partyPink mb-6">Lista VIP</h4>
+<p class="text-sm text-slate-400 mb-4">¡Suscríbete para un 15% de descuento en tu primer pack de fiesta y guías exclusivas!</p>
+<form class="space-y-4">
+<input class="w-full bg-slate-800 border-2 border-slate-700 rounded-lg p-3 text-white focus:border-partyPink outline-none" placeholder="Correo Electrónico" type="email"/>
+<button class="w-full bg-partyPink py-3 rounded-lg font-bungee hover:bg-white hover:text-partyPink transition-colors">¡SÍ! UNIRME</button>
+</form>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+      © 2023 FiestaMagic Cotillón. ¡Celebremos con responsabilidad! 🍭
+    </div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Confetti Script -->
+<script data-purpose="canvas-confetti">
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height - canvas.height;
+        this.size = Math.random() * 8 + 4;
+        this.color = ['#FF007A', '#FFD700', '#00FFFF', '#8A2BE2', '#FF4500'][Math.floor(Math.random() * 5)];
+        this.speedY = Math.random() * 3 + 2;
+        this.speedX = Math.random() * 2 - 1;
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = Math.random() * 5;
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX;
+        this.rotation += this.rotationSpeed;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation * Math.PI / 180);
+        ctx.fillStyle = this.color;
+        ctx.fillRect(-this.size/2, -this.size/2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    function init() {
+      resize();
+      for (let i = 0; i < 100; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', resize);
+    init();
+    animate();
+  </script>
+<!-- END: Confetti Script -->
+<!-- BEGIN: Scrolling Marquee CSS -->
+<style data-purpose="marquee-animation">
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 20s linear infinite;
+    }
+  </style>
+<!-- END: Scrolling Marquee CSS -->
+</body></html>

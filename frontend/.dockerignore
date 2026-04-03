@@ -1,0 +1,20 @@
+# Git & IDE
+.git
+.gitignore
+*.md
+specs/
+
+# Next.js build output
+.next/
+
+# Dependencies (se reinstalan en el build)
+node_modules/
+
+# Archivos de desarrollo
+*.tsbuildinfo
+download.jpg
+
+# Env files
+.env
+.env.*
+!.env.example

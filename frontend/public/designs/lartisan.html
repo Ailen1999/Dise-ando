@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Artisan Boulangerie | Panadería Francesa Tradicional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", // Terracota
+                        "background-light": "#f8f6f6", // Crema
+                        "background-dark": "#221610", // Espresso Oscuro
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .textured-bg {
+            background-color: #f8f6f6;
+            background-image: radial-gradient(#ec5b1310 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .dark .textured-bg {
+            background-color: #221610;
+            background-image: radial-gradient(#ec5b1305 1px, transparent 0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 textured-bg">
+<!-- Barra de Navegación Superior -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">bakery_dining</span>
+<h2 class="text-2xl font-black tracking-tight text-background-dark dark:text-background-light">L'Artisan</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#heritage">Nuestra Herencia</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#menu">Menú Boulangerie</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#visit">Visítanos</a>
+<button class="bg-primary text-white rounded-lg px-6 py-2.5 text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                    Pedido Online
+                </button>
+</nav>
+<button class="md:hidden text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6">
+<!-- Sección Hero -->
+<section class="py-12 md:py-20">
+<div class="relative overflow-hidden rounded-xl h-[500px] md:h-[650px] flex items-center justify-center text-center p-8 bg-cover bg-center" data-alt="Exhibición rústica de panes de masa madre y baguettes recién horneados" style="background-image: linear-gradient(rgba(34, 22, 16, 0.6), rgba(34, 22, 16, 0.4)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKBFgDmEW2At7HA8vv3QuAdST3bblyBDXv-oKIqLKbhtURLSL3LNvziRXn9SzGxUdF7SN7jPAXOgjo4x2TTbfp-ApY3yx7XXfGYbjPLU0PBeAhf9qgVH0T-MydlohukC9jhMwRDRQT3_jSzNRk2zt0br25bo82NSrIJc174cUJMHwAhRvVRPrFazgWTfwieoOgZ37wS88PBML8zuak0ZJ6cGYdqtLNAKjelHtU4rtpVB3NE9aKoLZXW_db5nIWXAqQZsRlr-H-1u0V');">
+<div class="max-w-3xl space-y-6">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary border border-primary/30 text-xs font-bold uppercase tracking-widest backdrop-blur-sm">Desde 1924</span>
+<h1 class="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight">
+                        Excelencia Francesa<br/><span class="text-primary italic">Hecha a Mano</span>
+</h1>
+<p class="text-lg md:text-xl text-white/90 font-medium max-w-xl mx-auto">
+                        Vive el arte atemporal de la masa madre tradicional y la pastelería artesanal, horneados diariamente en nuestros hornos de piedra a leña.
+                    </p>
+<div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white rounded-lg px-8 py-4 text-base font-bold shadow-xl shadow-primary/30 hover:bg-primary/90 transition-all">Explora el Horneo de Hoy</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-lg px-8 py-4 text-base font-bold hover:bg-white/20 transition-all">Nuestra Historia</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección Herencia -->
+<section class="py-20 border-t border-primary/10" id="heritage">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Artesanía Tradicional</h2>
+<h3 class="text-4xl md:text-5xl font-black text-background-dark dark:text-background-light leading-tight">Nuestra Herencia de Paciencia</h3>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Desde 1924, honramos los métodos de fermentación lenta transmitidos de generación en generación. Cada hogaza es un testimonio de los cuatro elementos básicos: harina, agua, sal y tiempo.
+                        </p>
+</div>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="p-6 bg-primary/5 rounded-xl border border-primary/10 group hover:border-primary/30 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">grass</span>
+<h4 class="text-lg font-bold mb-2">Granos Orgánicos</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Trigo antiguo molido en piedra, proveniente de granjas familiares en la Provenza.</p>
+</div>
+<div class="p-6 bg-primary/5 rounded-xl border border-primary/10 group hover:border-primary/30 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">hourglass_top</span>
+<h4 class="text-lg font-bold mb-2">Fermentación de 48h</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Leudado en frío prolongado para perfiles de sabor profundos y mayor digestibilidad.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 h-[500px]">
+<div class="rounded-xl overflow-hidden bg-cover bg-center h-full" data-alt="Panadero espolvoreando harina sobre una hogaza de masa madre" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSbMgpg1d87V4rl4Ipu7gr3TUYDxtsZIJysuzSzmEIzj3sQpOHnVMXeLpdA7e8Y_J72yWQ-HEL2CQFd9csLKPxtsbT4u4F-nqh7sgsovVq2BZQTDrj2UJdwwp7ft1I0u7JloeLO638CR0V32rsRatLAMSCAgmPeW4dHSA1LXEfP58uCdcm2dN9HJOju3gjG3QbcCrYpH7DZXt-gFEHMB72EZqPyylY_oDzBRBnn5sUMfcno9zFVP1lYujzTpvVFDAWkamvBBIf2pub');"></div>
+<div class="grid grid-rows-2 gap-4">
+<div class="rounded-xl overflow-hidden bg-cover bg-center h-full" data-alt="Cruasanes dorados apilados en una cesta" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsojchb7PBn-VZ4XzONoNl10qK3gNIM-0Q9N3OWRtRUuZC8LjR9rqcxEm3aaFZwgY48gQ6FIhKE8dAvJjm1lu-QDfsZLNSUw3--abNdyP7ZiDSJxW0cMB-NKukm6t49StOXki1me8vHuOAXAhreeynevuto4RwmIrxZD8GvBT86bb5jlNOm3E2zZr9vwzaBg_o3se0juEmGyV0yCl3oI94-0CUftBQY2rYAHC2_zVT6cVCyc0U_SeR0bRC6UvN933u01dHlkbvc1-W');"></div>
+<div class="rounded-xl overflow-hidden bg-cover bg-center h-full" data-alt="Interior de un horno de ladrillo rústico a leña" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClWZcB2edf-MTTvZWgmeeYkjuUjto4NJtRIT99-gClCm62dWvKb-dGSavhpzat_WAzzOLmzVJ0yaOoH2kiRG0NKSNW-OdeCCBCUVNPPtTo_y0UHwiWrejXqTDk4I6ezL-3DOd43nlYxrwnHLno9-GCK1jNioCkMSucKoHwA7InG3c3nfhgWBRJhsU0wGKFKf3WGVM0MHPIjIduOtFpYJ48J5cc5YTK6w4nld_1VNvQ1b4pNpRQ7UEaeU3RZNRzYdErJZbnYEqiF_dC');"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección Menú -->
+<section class="py-20" id="menu">
+<div class="text-center space-y-4 mb-16">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Le Menu Du Jour</h2>
+<h3 class="text-4xl md:text-5xl font-black text-background-dark dark:text-background-light">Horneado con Amor</h3>
+<div class="flex justify-center gap-4 mt-8">
+<button class="px-6 py-2 border-b-2 border-primary text-primary font-bold">Boulangerie</button>
+<button class="px-6 py-2 border-b-2 border-transparent text-slate-400 font-bold hover:text-primary transition-colors">Pâtisserie</button>
+<button class="px-6 py-2 border-b-2 border-transparent text-slate-400 font-bold hover:text-primary transition-colors">Viennoiserie</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Item Menú 1 -->
+<div class="flex flex-col gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-white/5 transition-all group">
+<div class="h-64 rounded-lg overflow-hidden relative">
+<img alt="Baguette Tradicional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Baguettes francesas tradicionales crujientes y doradas en una rejilla" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASQ8crI12UJ-N1VLxKJSBONIU0McMhEH1qAK0H0sBb6p0CMX5zugCrYHhRrpcsaCxVbtybLGYzlxBhf1zpQB8tr-4tm7DsBdvV_md-Ph401fLptWEAwxtP1pqmp1v0RRnz_-PNtk5oNGNBigvPODuiTzNXwCmtOeD4LsCd_0a7N30RW0BW5MSMHwlT0rIvQLlKmkOIAnki0I_RLMQyova8Y9JUdC5-zT_QqXxUrgTHYIkBErUVvFCWI1MJk3e0Yyrd1MhIC0Gu6hj-"/>
+<span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Insignia</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="text-xl font-bold">Baguette Tradition</h4>
+<p class="text-sm text-slate-500 italic">Levain de 48 horas, sal marina, trigo orgánico T65.</p>
+</div>
+<span class="text-lg font-black text-primary">€3.50</span>
+</div>
+</div>
+<!-- Item Menú 2 -->
+<div class="flex flex-col gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-white/5 transition-all group">
+<div class="h-64 rounded-lg overflow-hidden relative">
+<img alt="Masa Madre de Campiña" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Gran hogaza rústica de masa madre espolvoreada con harina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7hvqh-XCmra0IqKtvtqpNcUHxF_S6JstLsdtkZz2kk9Z0wKCNKffhSsnqTWExtbLUeGQ2jn64eSH2c45LdKcT_f7sPAoV4kb3gcuC8R3LvDFrryPCDHx2cBjmQx-PLiqtGG0yDZ-vGscaiTLgfaIJy1i_u3lISES2fiFxQL-Fy_OrXv1FYli4oUR8krLYm2BdMun2wxkPVsk2828IvnA-YBPQU00iuTGYGFJovaqvstvvZhlEAo4d_ZF_yAv-FlzhyFcISbFgpEWL"/>
+</div>
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="text-xl font-bold">Pain de Campagne</h4>
+<p class="text-sm text-slate-500 italic">Corteza robusta, interior húmedo, toques de centeno.</p>
+</div>
+<span class="text-lg font-black text-primary">€7.20</span>
+</div>
+</div>
+<!-- Item Menú 3 -->
+<div class="flex flex-col gap-4 p-4 rounded-xl hover:bg-white dark:hover:bg-white/5 transition-all group">
+<div class="h-64 rounded-lg overflow-hidden relative">
+<img alt="Cruasán de Mantequilla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Mantequilla hojaldrada crujiente con textura en capas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpN6IFr2r-bjzw06iVNPOjK955S9V-I3hQil5NqVRBwsn_epEeFBWNPUaa7ZO4fVBHmxMuDy5kkUPWlqu_RnnXhfd7zIrcxmo7rWCZL1eZ42Iirm9QjKn-tbo1OFAk7huucHCVyELSVA3HPUK4GFEC1bq-AIr6EbYsNBijgevu7oWL34ERWxfWMlw_REf9KvUrWv6GDdtbIU8QxcliS6NbTesnniOhjlPrItpCKArhDord_LbPaArUKpTzY5jFiQVlMw320dt9Rw1z"/>
+</div>
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="text-xl font-bold">Cruasán Clásico</h4>
+<p class="text-sm text-slate-500 italic">Mantequilla Isigny, laminado a mano para 27 capas.</p>
+</div>
+<span class="text-lg font-black text-primary">€2.90</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="border-2 border-primary text-primary rounded-lg px-8 py-3 text-sm font-bold hover:bg-primary hover:text-white transition-all">Descargar Menú Estacional Completo</button>
+</div>
+</section>
+<!-- Sección Visita -->
+<section class="py-20 border-t border-primary/10" id="visit">
+<div class="grid lg:grid-cols-2 gap-12 bg-background-dark text-white rounded-2xl overflow-hidden shadow-2xl">
+<div class="p-10 md:p-16 space-y-10">
+<div class="space-y-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Encuéntranos</h2>
+<h3 class="text-4xl font-black">Visita Nuestra Panadería</h3>
+<p class="text-slate-400">Acompáñanos en el corazón del Barrio Latino para un café fresco y pan caliente, directo del horno.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="font-bold">Dirección</h4>
+<p class="text-slate-400">12 Rue de la Boulangerie, 75005 París, Francia</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<h4 class="font-bold">Horarios de Apertura</h4>
+<ul class="text-slate-400 space-y-1 text-sm">
+<li class="flex justify-between w-64"><span>Lun - Vie:</span> <span>07:00 - 19:00</span></li>
+<li class="flex justify-between w-64"><span>Sábado:</span> <span>08:00 - 18:00</span></li>
+<li class="flex justify-between w-64"><span>Domingo:</span> <span>08:00 - 14:00</span></li>
+</ul>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">directions</span>
+                        Cómo Llegar
+                    </button>
+</div>
+<div class="relative min-h-[400px]">
+<div class="absolute inset-0 bg-slate-800 grayscale" data-location="París" style="">
+<img alt="Mapa de París" class="w-full h-full object-cover opacity-60" data-alt="Mapa estilizado mostrando la ubicación en París" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAci_-hq-VNV76BIG3J7cWniT-18IsDwWUoQW_ygb0OWnP5OOSU53v0u9YwsMaBsleAirtUU-EKUVVgOv0hI2L41iIIMQgruBM-CwD3C6jrgEcObGUWuqxsYlLRZTtkYI-hr2fPQ-hgNYyyz4sIjc2wpY5xxPW7BII9nFMG38oV0rtaObSAVPZwg9KrTyROdflTrBMNeB5exjTwOzT55JJ5pDHl00Z8aGVq2O9dQOO1cZwkA3SzUdHyihl7ZkUA80Wh86Vjpvz8jV2D"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Suscripción Newsletter -->
+<section class="py-20">
+<div class="relative rounded-2xl p-10 md:p-20 text-center overflow-hidden border border-primary/20 bg-primary/5">
+<div class="relative z-10 max-w-2xl mx-auto space-y-8">
+<span class="material-symbols-outlined text-5xl text-primary">mail</span>
+<h2 class="text-3xl md:text-5xl font-black">Pan, Enviado a tu Bandeja de Entrada</h2>
+<p class="text-slate-600 dark:text-slate-400">Únete a nuestro boletín para recibir actualizaciones semanales sobre horneos estacionales, recetas de nuestros maestros panaderos e invitaciones a eventos exclusivos de degustación.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 rounded-xl border-slate-200 dark:border-slate-800 dark:bg-background-dark py-4 px-6 focus:ring-primary focus:border-primary" placeholder="Dirección de Correo" type="email"/>
+<button class="bg-primary text-white rounded-xl px-8 py-4 font-bold hover:scale-105 transition-transform" type="submit">Suscribirse</button>
+</form>
+</div>
+<!-- Elementos decorativos sutiles -->
+<div class="absolute -top-10 -left-10 text-[180px] text-primary/5 select-none font-black italic">ARTISAN</div>
+<div class="absolute -bottom-10 -right-10 text-[180px] text-primary/5 select-none font-black italic">TRADITION</div>
+</div>
+</section>
+</main>
+<!-- Pie de Página -->
+<footer class="bg-background-dark text-white py-16">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">bakery_dining</span>
+<h2 class="text-xl font-black tracking-tight text-white">L'Artisan</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">Honrando el oficio perfeccionado por el tiempo de la panadería francesa desde 1924. Calidad, textura y sabor en cada bocado.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">link</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-lg">Tienda</h4>
+<ul class="space-y-3 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Panes Diarios</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pastelería</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Café y Té</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tarjetas de Regalo</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-lg">Acerca de</h4>
+<ul class="space-y-3 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Nuestra Historia</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nuestros Agricultores</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sostenibilidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Carreras</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-lg">Contacto</h4>
+<ul class="space-y-3 text-slate-400 text-sm">
+<li>hello@lartisan.fr</li>
+<li>+33 1 23 45 67 89</li>
+<li>Consultas de Prensa</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-16 mt-16 border-t border-white/5 flex flex-col md:flex-row justify-between text-xs text-slate-500 uppercase tracking-widest gap-4">
+<p>© 2024 L'Artisan Boulangerie. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a href="#">Política de Privacidad</a>
+<a href="#">Términos de Servicio</a>
+</div>
+</div>
+</footer>
+</body></html>

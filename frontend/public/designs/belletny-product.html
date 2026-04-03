@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Belletny | Base Velvet Silk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Barra de Navegación Superior -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight uppercase">Belletny</h2>
+</div>
+<nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-slate-600 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Rostro</a>
+<a class="hover:text-primary transition-colors" href="#">Ojos</a>
+<a class="hover:text-primary transition-colors" href="#">Labios</a>
+<a class="hover:text-primary transition-colors" href="#">Cuidado de la Piel</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all relative">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute top-0 right-0 h-4 w-4 bg-primary text-white text-[10px] rounded-full flex items-center justify-center border-2 border-background-light dark:border-background-dark">2</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Avatar de perfil de usuario" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVigQRWyuvftVnSP-UORE86TgVp457tWxOUzBUcPMimFtg_EK8DItbmr5jigiHbegQ_h1U5pyAeS0U-HFuSYcky-4C3Yzsq2wS15h5Q7mtSzzNx5oD8qETgqjecVjG6QeKblFshGwCxolB_-PKtynW4COxmF2yenS3BX3vuyD-DmrO5VvOcCyA4m-E5kHpgWWKp1mk-_pdqLugluSzv6pZ_6eS5zR7XE7VAWiZ5qP1f_Ao4O1UVz-qxmeBY9qUL3Chl-l_5fIqwm4h");'></div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-12 py-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Galería de Imágenes de Producto -->
+<div class="space-y-6">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-xl">
+<img alt="Frasco de base de lujo en iluminación de estudio elegante" class="w-full h-full object-cover" data-alt="Frasco de base de maquillaje profesional sobre fondo crema suave" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNVNTk4UtifZtOnY96YS_uIGQFwplHacoa7jGWcDnps1JQjzp25jhiJtJT5bBNJuWfEydenmKJkH2QILsjYyw0gBsskRN3P5JKJR6WfGVDNd9NBuaffK_k-a_WFbFqbqZSVU02O2I-mf_3YrJeZr1ccvLNPqaw9tf-iDr0NviA-uQWVz5vi6tozYGGFdnlxFvF3GrV3Eaw2xPJ2C-u-s8QGcYkb8iMGNLzjRk4sz_sL9nxvs-4m8suiDswKeq5X5tz3eV3ig9I9EZX"/>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-primary cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Detalle del frasco de base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1c7K93gJb4T_6eDZBSXbuK7or0SIszkxXsYJ0h2Bh1hid-myX0SBULCiZgay_-FeMD6v3607P6rHAUV53I_2C7yNkocZAXsWK5CKbT3DZc1_q6FWXMqAY20sGsP6W9PTO2kgsHXLHPaD0JY4rTbkBvpMdD1cabBLQD-0k1AdrXKDDWDwGJjPz7f5umZxYBGK_AySlUEhudH9Rlu5LEF04kwNVplcXOskmZhSTszWFW1tsObj-gzW_s_YQ2Vpgjjf7yoTBuH6dVTEC"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-transparent hover:border-primary/50 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Muestra de textura de base en la piel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZLTn73dJjCNEL_iEu7lalZqKKsQqv1ky6rKNcQw4fZUddAKwzuOhdIgq9qKgzFBpMjr7vpNllkhZA4568EiIt6tTePQd7JyRNFT6N4fE8wdy2XKLsbbY6jo1VfMY7rRzCSt6Ojqv659IZ9dOZszj5wSdyfxn0-40lTpCBdEGaiK-h2KW6IMPepOF41Sv2tdPDIcBqLvmS5EZ6KCdnPkwU4G3JYmR3g2-T2v32Ymxaqv5ZnNy4NCT0nryEtnCizPnfgQFgMq-SQBp1"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-transparent hover:border-primary/50 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Modelo usando la base Velvet Silk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTv1GmUj4EEXjNu6g6iNKVUJciBg4Rktcn9w8nI29P6kcwAqUVLd5OX5byWZHdX2jBFd5aGyLaRBOZxQ_YpOhaz5AMP2hXhjNuZRSZz5BAKw7g9Iz521BhkPpbDcZ1JGzxXjjlqfI9-_c5a_jH-t9KPapKzyiAMoXErsiSUDHBMnyu_UkW7LHiO1b5ygi0HL9yd_RomfRo5Ib5yuBMuN3H93pUp8KpUbWgOhXMAGir-dKcL5Ny08CBkumgUQKVrD9jHwlK-lSysmUi"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-transparent hover:border-primary/50 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Primer plano del aplicador de base abierto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGF6bnkzlQwCmx5u-b58je9BHo4cXJaWi80ziNmxbO44sQZO2aRTWTCd8e0frWvO8Heombe3aT9AZ_lh-dvFnmdA96f94OVrN4euvhNn5gtIf5LgiBC8vxe0iBbCEpK2ib_Q177-OpIKoQv0l1Csff0rfZvq0fSxluv0ho35yonUTOMy_ecyCDGQrXvgYq8IyQ6I7mUr5MoWi8QwMq5h5E3oII-N0reSeTztuOknB6ALHQlt27QAG-zD-kbVTdmRq8woeprJwnJ4VQ"/>
+</div>
+</div>
+</div>
+<!-- Detalles del Producto -->
+<div class="flex flex-col">
+<div class="mb-2">
+<span class="text-primary font-semibold tracking-[0.2em] text-xs uppercase">Colección Rostro Premium</span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-5xl font-black leading-tight tracking-tight mb-2">Base Velvet Silk</h1>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">4.8 (124 Reseñas)</span>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white mb-8">$64.00</p>
+<div class="mb-8 p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Una base ligera de cobertura total con un acabado mate natural. Infundida con proteínas de seda y ácido hialurónico para una hidratación de 24 horas y una tez impecable con efecto aerógrafo.
+                        </p>
+</div>
+<!-- Selector de Tonos -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">Seleccionar Tono</h3>
+<span class="text-slate-500 dark:text-slate-400 text-sm">Tono: <span class="text-primary font-semibold">04 Arena</span></span>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#F5E1C8] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#E9CBA7] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#DDB992] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-primary ring-2 ring-primary/20 bg-[#C9A27D] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#B08661] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#946B4B] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#7B543B] hover:scale-110 transition-transform"></button>
+<button class="size-10 rounded-full border-2 border-slate-200 bg-[#5F3E2B] hover:scale-110 transition-transform"></button>
+</div>
+</div>
+<!-- Botones de Acción -->
+<div class="flex gap-4 mb-10">
+<button class="flex-1 h-14 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">shopping_bag</span>
+                            Añadir a la Bolsa
+                        </button>
+<button class="w-14 h-14 border-2 border-primary/20 text-primary rounded-xl flex items-center justify-center hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Pestañas/Acordeones -->
+<div class="space-y-1 border-t border-slate-200 dark:border-slate-800">
+<details class="group py-4 border-b border-slate-200 dark:border-slate-800" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-slate-900 dark:text-white">
+                                Ingredientes Clave
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed space-y-2">
+<p><strong class="text-primary">Proteínas de Seda:</strong> Proporcionan una textura suave y aterciopelada y difuminan las imperfecciones.</p>
+<p><strong class="text-primary">Ácido Hialurónico:</strong> Hidrata profundamente y rellena la piel para un brillo juvenil.</p>
+<p><strong class="text-primary">Vitamina E:</strong> Un potente antioxidante que protege contra los factores de estrés ambiental.</p>
+</div>
+</details>
+<details class="group py-4 border-b border-slate-200 dark:border-slate-800">
+<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-slate-900 dark:text-white">
+                                Consejos de Uso
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Para obtener mejores resultados, aplique una pequeña cantidad comenzando desde el centro del rostro y difumínela hacia afuera usando una esponja de belleza húmeda o una brocha de base densa. Construya la cobertura según sea necesario para un acabado verdaderamente impecable.
+                            </div>
+</details>
+</div>
+</div>
+</main>
+<!-- Sección de Reseñas -->
+<section class="bg-primary/5 py-20 px-6 md:px-20 mt-12">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<div>
+<h2 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Reseñas de Clientes</h2>
+<div class="flex items-center gap-4">
+<span class="text-4xl font-bold text-primary">4.8</span>
+<div class="flex flex-col">
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="text-slate-500 text-xs">Basado en 124 reseñas</span>
+</div>
+</div>
+</div>
+<button class="px-8 py-3 bg-white dark:bg-slate-800 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary/5 transition-all">
+                            Escribir una Reseña
+                        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Reseña 1 -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
+<div class="flex justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">JD</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Juana Díaz</p>
+<p class="text-xs text-slate-400">Comprador Verificado • Hace 2 días</p>
+</div>
+</div>
+<div class="flex text-primary scale-75 origin-right">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+</div>
+<h4 class="font-bold mb-2">¡El santo grial de las bases!</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                He probado de todo y esta es la primera base que realmente dura todo el día sin sentirse pesada. El acabado es exactamente lo que dice: terciopelo. Absolutamente hermosa.
+                            </p>
+</div>
+<!-- Reseña 2 -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
+<div class="flex justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">MS</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Michelle Smith</p>
+<p class="text-xs text-slate-400">Comprador Verificado • Hace 1 semana</p>
+</div>
+</div>
+<div class="flex text-primary scale-75 origin-right">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<h4 class="font-bold mb-2">Piel impecable en un frasco</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                ¡Me encanta la cobertura! Oculta mis rojeces pero sigue pareciendo piel. La gama de tonos también es bastante impresionante. Definitivamente volveré a comprar.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pie de Página -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12 px-6 md:px-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary/60">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-slate-400 font-bold uppercase tracking-widest text-sm">Belletny</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500 font-medium">
+<a class="hover:text-primary transition-colors" href="#">Envío</a>
+<a class="hover:text-primary transition-colors" href="#">Devoluciones</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">chat_bubble</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+<p class="text-center text-slate-400 text-xs mt-10">© 2024 Belletny Cosmética de Lujo. Todos los derechos reservados.</p>
+</footer>
+</div>
+</div>
+<style>
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        ::selection {
+            background-color: #ec5b13;
+            color: white;
+        }
+    </style>
+</body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Belletny | Arte Profesional</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navegación -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-12">
+<a class="flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">face_5</span>
+<span class="text-2xl font-black tracking-tighter uppercase text-slate-900 dark:text-white">Belletny</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Tienda</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Colecciones</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Tips de Arte</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Nosotros</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-slate-200/50 dark:bg-white/5 rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-slate-500 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-500" placeholder="Buscar en la colección" type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Sección Hero -->
+<section class="relative h-[85vh] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Toma editorial profesional de primer plano de maquillaje de alta moda" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgZ3qyneLoPvgbN69FqtK4br4pI86un-APTcL8-5WItwwrrAALUnvlJzROkk5EED3N2auvZ3akKaKpIJIBJFQ-PxgDXi6ClmB7JczeqODG5047N9DNl7szSxd2qpDJP2DN8krpqSh4VEv4wkayWYufSse5j01Vgj-qy8S0zjh5cgd0bFjDnB6S3z0Hu7ahOr29wwDhPpQFLA46pn5EbVDbauprpNhPNpJ43h_6PNRlvUkgRvROd2Clqgacg_TfhS4w5Ni0QJanm86A");'>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/60 to-transparent"></div>
+</div>
+<div class="relative h-full max-w-7xl mx-auto px-4 flex flex-col justify-center items-start">
+<div class="max-w-2xl space-y-6">
+<span class="inline-block px-4 py-1.5 bg-primary/20 backdrop-blur-sm text-primary text-xs font-bold tracking-[0.2em] uppercase rounded-full">Verano 2024</span>
+<h1 class="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
+                        THE NOIR<br/><span class="text-primary italic">EDIT</span>
+</h1>
+<p class="text-lg text-slate-200 font-light leading-relaxed max-w-md">
+                        Experimenta la cima del arte profesional con nuestra colección curada de tonos obsidiana y texturas aterciopeladas.
+                    </p>
+<div class="pt-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-none font-bold text-sm uppercase tracking-widest transition-all hover:scale-105">
+                            Ver la Colección
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Productos en Tendencia -->
+<section class="py-24 px-4 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-16">
+<div>
+<h2 class="text-4xl font-black tracking-tighter uppercase mb-2">Los Esenciales</h2>
+<p class="text-slate-500 uppercase text-xs tracking-[0.3em]">Tendencia esta semana</p>
+</div>
+<a class="hidden md:block text-sm font-bold border-b-2 border-primary pb-1 uppercase tracking-wider" href="#">Ver Todos los Productos</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Producto 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-white/5 mb-6">
+<img alt="Labial Mate de Terciopelo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Labial mate de terciopelo rojo profundo en estuche dorado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9sr9XoQP9LEVFhIoRgRQVoC-c29_rII2CUkS0LeaLv_Ox9X67hl1s6DNLLGD7zH3F14z_k4F2c-TJKGRoOpbI9J2f8quJ8SKFQ1MbRE77ZFyhgmK0aGlNBbgB0XqId-2r8lm7cd2Dd2SEBJOJFheuG9FzGM7BQvnqBPwNZOAYsLQ6TjJIyNt55eM2RhroiCdYYA4yhnTvKYaxU_r0DX9w8i8nmBHFq8DNfg7tVEPyNiyfGWlJQrYH-RHORQ1O-ddv2YhQe_753SSy"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-widest">Añadir Rápido</button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-bold text-lg">Labial Mate Terciopelo</h3>
+<p class="text-slate-500 text-sm">Pigmento Rico • 12 Tonos</p>
+<p class="text-primary font-bold pt-2">$42.00</p>
+</div>
+</div>
+<!-- Producto 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-white/5 mb-6">
+<img alt="Base Radiante" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Frasco de base líquida con lujosa bomba dorada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyHXrQa7jiwFCPksm9K6Sd98ubr6f9_65PjVCsq7gZBiOw6rX_DYNbFFQH1nAumz160J1CuA0gyGbUiiz6M0-ihiI3bYQYFSPibyc6lKisOO27hZADsJCSHyzaGPglFkRrtDOa1uQbnOapx2nztJ2ut_8O0TIs7aMPgPqFUoJ0cpDC9-XLLwBP_hNt7kLVYXSe0eLSbg_YgnJYQS0zoZz_1wqCeq0D3hSa5qIUW-l3JU_hrJBPXlRb1ageZvSe0spl3fVo0wCYFVT0"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-widest">Añadir Rápido</button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-bold text-lg">Base Silk Finish</h3>
+<p class="text-slate-500 text-sm">Cobertura Impecable 24h</p>
+<p class="text-primary font-bold pt-2">$58.00</p>
+</div>
+</div>
+<!-- Producto 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-white/5 mb-6">
+<img alt="Paleta de Sombras" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Paleta de sombras multicolor brillante profesional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkRLlTt6P7VJYaH_HRqV7PEhYKXvw_GHRDEJXcwxmVB-UjBrxQGSKsRDc53gBe1_LHMrJYXlA3hf8DOmecT1jLlvYAAHXZcLl7W0n4z51bPDVYxkvfYaJXbSIL27x3y-RSlpzhGBps5AYwdRaVqVTD_LBlwNrG2fTDmGJBSBS35sfo-dfef_rTbm1sV66rw991UKrWVR5g_ZFy_BDWCMy7EyNAyvVPMN98S7mD-nnzMP6PlMMNofi1rPJ8V7rCi9_LpZL_KWbk0sOP"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-widest">Añadir Rápido</button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-bold text-lg">Paleta Celestial</h3>
+<p class="text-slate-500 text-sm">18 Pigmentos de Alta Intensidad</p>
+<p class="text-primary font-bold pt-2">$75.00</p>
+</div>
+</div>
+<!-- Producto 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-white/5 mb-6">
+<img alt="Brocha para Esculpir" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Brocha profesional para esculpir maquillaje hecha a mano" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCeDNg0SOXgkrvUE_l_W0dKfV-L9VDO4AZRG9jGUaRccmBTUQavflvqrbO7_uPtYnuniMN_twEKle1eQVwj49Uit4VQ9hMZEClkz5Pr9ViYUEGTXqP0VGuu7r0EHj8apxFT2Dv98tn_hNSMR0_s9IP1FGYodY3JBQRzVbxzLxxsLH9OmXDEJhv_gPUeEhatLb9LCUFo6aoU0RTxD_oJUuVYPWRHx_WwAt17C7UFnwm5TZGc827wyinu8fVI0_jfYReXf54YFchwdju"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-black px-6 py-3 text-xs font-bold uppercase tracking-widest">Añadir Rápido</button>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-bold text-lg">Brocha Master Sculpting</h3>
+<p class="text-slate-500 text-sm">Fibra Hecha a Mano</p>
+<p class="text-primary font-bold pt-2">$34.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección de Arte (Diseño Editorial) -->
+<section class="py-24 bg-white dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square w-full bg-slate-100 overflow-hidden">
+<img alt="Arte del Maquillaje" class="w-full h-full object-cover" data-alt="Maquillista profesional aplicando delineador a una modelo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtRSTwbVBaKXizLd60VxVOHTuRMKyxLXodv4Ty-wuOd5CCqH6VhqH1OyMCzYNZVHJk8NmfF0H0a4BuNAK3y2eSIqW2Ey7kZsXNsCXwpwiDnRvs3qiF3kqkgUp34P8QT8UEgd-mRf_JO6fpH4H3dF85d5pybCrN6D8z1P0WGV0s2--ME_phrA1Cy-fX0gIJjfIIMl1cjIYnIQhJLvk-xzFzJuEuqyHVieq12K4oRy-DpfasIUrjbZKgBPeUOEliJicixBfYr5vzZ6wi"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-80 hidden md:block border-8 border-primary overflow-hidden">
+<img alt="Detalle" class="w-full h-full object-cover" data-alt="Foto macro de textura de sombra de ojos brillante" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7SlFiAtsu_K1ZLJUfXoaJ4fnAt4Fgsp4NYjLY05ox5uo5FoMgLcP2UINBAb76LuVXAPIgylXrm1AWY6JTOwn5Ql7uykD_V36wSTiImTW0Rczndz8a22BA-g4NC--TQEOfuPEvIORCbL9QCmcunZqzrySeDlsTX_8POYhTI6vTKQMABF2dVhDNlQRGiuMmPWleQDNEUZ0ZfTIuZb4eDo7d84Rg-K6Rc67QhUg68vVYqVuCAIyYiovteihGvk78G8G2U3fwWFzxbwGX"/>
+</div>
+</div>
+<div class="space-y-8 lg:pl-12">
+<h2 class="text-5xl font-black uppercase tracking-tighter leading-none">Las Series<br/>Masterclass</h2>
+<div class="space-y-6">
+<div class="border-l-4 border-primary pl-6 py-2">
+<h4 class="font-bold text-xl mb-1 italic">Logrando el Look Glass Skin</h4>
+<p class="text-slate-500 text-sm">Aprende las técnicas de capas utilizadas por artistas de pasarela para crear una base luminosa y transpirable.</p>
+</div>
+<div class="border-l-4 border-slate-200 dark:border-white/10 pl-6 py-2">
+<h4 class="font-bold text-xl mb-1 italic">Secretos del Delineador de Precisión</h4>
+<p class="text-slate-500 text-sm">Una inmersión profunda en la geometría del ala y la selección de productos para una duración de 16 horas.</p>
+</div>
+<div class="border-l-4 border-slate-200 dark:border-white/10 pl-6 py-2">
+<h4 class="font-bold text-xl mb-1 italic">Contorno para la Vida Real</h4>
+<p class="text-slate-500 text-sm">Olvida las líneas pesadas: descubre el método de esculpido suave que funciona bajo cualquier luz.</p>
+</div>
+</div>
+<button class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-10 py-5 font-bold uppercase tracking-widest text-xs transition-colors hover:bg-primary dark:hover:bg-primary dark:hover:text-white">
+                            Explorar Todos los Tips
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Boletín Informativo -->
+<section class="py-24 bg-primary text-white">
+<div class="max-w-4xl mx-auto px-4 text-center space-y-8">
+<span class="material-symbols-outlined text-6xl">mail_outline</span>
+<h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter">Únete al Círculo Interno</h2>
+<p class="text-white/80 max-w-lg mx-auto font-medium">Sé el primero en enterarte de lanzamientos privados, sets de edición limitada y clases magistrales exclusivas para artistas.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+<input class="flex-1 px-6 py-4 bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:ring-white focus:border-white rounded-none" placeholder="Tu dirección de correo electrónico" type="email"/>
+<button class="bg-white text-primary px-10 py-4 font-black uppercase tracking-widest hover:bg-slate-100 transition-colors">Suscribirse</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Pie de Página -->
+<footer class="bg-background-dark text-white py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 border-b border-white/10 pb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">face_5</span>
+<span class="text-xl font-black tracking-tighter uppercase">Belletny</span>
+</div>
+<p class="text-slate-400 max-w-xs text-sm leading-relaxed mb-8">
+                        La intersección de la ciencia y el arte. Formulaciones de grado profesional para todos.
+                    </p>
+<div class="flex gap-4">
+<a class="p-2 bg-white/5 rounded-full hover:bg-primary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="p-2 bg-white/5 rounded-full hover:bg-primary transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold uppercase tracking-widest text-sm mb-6">Tienda</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Nuevas Llegadas</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Rostro</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ojos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Labios</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold uppercase tracking-widest text-sm mb-6">Aprender</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Tutoriales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Encuentra tu Tono</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Programa Pro</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold uppercase tracking-widest text-sm mb-6">Soporte</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Envío</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Devoluciones</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 uppercase tracking-widest">
+<p>© 2024 Belletny Professional Artistry. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Términos de Servicio</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

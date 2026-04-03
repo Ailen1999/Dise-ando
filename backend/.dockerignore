@@ -1,0 +1,18 @@
+# Git & IDE
+.git
+.gitignore
+*.md
+
+# Build artifacts
+*.exe
+*.dll
+
+# Database files (no incluir en la imagen; se usa un volumen)
+*.db
+*.db-shm
+*.db-wal
+
+# Env files
+.env
+.env.*
+!.env.example

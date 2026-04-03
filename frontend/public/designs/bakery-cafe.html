@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bakery / Café - Café Fresco y Pastelería</title>
+    <!-- Tailwind CSS v3 with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts for Serif Typography -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'forest-green': '#3d523d',
+                'cream': '#f4f1ea',
+                'warm-brown': '#a67c52',
+                'soft-white': '#ffffff',
+                'dark-charcoal': '#1a1a1a',
+              },
+              fontFamily: {
+                serif: ['"DM+Serif+Display"', 'serif'],
+                sans: ['Inter', 'sans-serif'],
+              },
+            }
+          }
+        }
+      </script>
+    <style data-purpose="custom-typography">
+        .font-serif-italic {
+          font-family: 'DM Serif Display', serif;
+          font-style: italic;
+        }
+        .letter-spacing-wide {
+          letter-spacing: 0.05em;
+        }
+      </style>
+</head>
+<body class="bg-cream text-dark-charcoal font-sans antialiased">
+    <!-- BEGIN: Navigation -->
+    <nav class="bg-forest-green text-white py-6 px-8 flex justify-between items-center" data-purpose="main-nav">
+        <div class="flex items-center space-x-2">
+            <div class="w-4 h-4 bg-white/30 rounded-full"></div>
+            <span class="font-serif text-xl tracking-wider uppercase">Panadería / Café</span>
+        </div>
+        <ul class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-white/80">
+            <li><a class="hover:text-white transition-colors" href="#">Inicio</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Menú</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Nosotros</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Reseñas</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Galería</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Ubicación</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Contacto</a></li>
+        </ul>
+        <button class="bg-warm-brown text-white px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-opacity-90 transition-all">
+            Pedir Online
+        </button>
+    </nav>
+    <!-- END: Navigation -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-12 gap-8">
+            <!-- BEGIN: Hero & Left Column -->
+            <div class="col-span-12 lg:col-span-8 space-y-8">
+                <!-- Hero Section -->
+                <section class="bg-forest-green text-white rounded-[2rem] p-12 relative overflow-hidden flex flex-col md:flex-row gap-8" data-purpose="hero-section">
+                    <div class="flex-1 space-y-6 z-10">
+                        <h1 class="font-serif text-5xl md:text-7xl leading-tight">
+                            Café Fresco<br/>y Pastelería,<br/>Cada Día
+                        </h1>
+                        <p class="text-white/80 max-w-sm text-sm leading-relaxed">
+                            Un rincón acogedor en el barrio donde el espresso de especialidad se encuentra con croissants hojaldrados calientes. Pedí con antelación, evitá la fila y disfrutá el momento.
+                        </p>
+                        <div class="flex space-x-4 pt-4">
+                            <button class="bg-warm-brown text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all">Pedir online</button>
+                            <button class="border border-white/40 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-white/10 transition-all">Ver Menú</button>
+                        </div>
+                        <div class="flex space-x-6 pt-12 text-[10px] uppercase tracking-widest text-white/60">
+                            <span>1,200+ reseñas</span>
+                            <span>Origen local</span>
+                            <span>Retiro en 15 min</span>
+                        </div>
+                    </div>
+                    <div class="flex-1 relative min-h-[400px]">
+                        <img alt="Café y pastales" class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-B99ECXhs1EQ-uyfl7n0bQm0RltR1TE9MeXjFjxMEMiWyy1JPo8jXTeoObIuoOIVntH6txL9-2PDqFi5FGgZm3RXXW2KrS5CaeewkXZPnzFcFPIhL9JU7wqMPkJsTgy0JHY5xKy5eGslxo74JJKjbc4jqMmFhnflcTIXCzU2x6-Ew-8G0jZvjPAV_i9Q7QK0ews-jEGnxYhFlm3bp-rtaxKNLjWwo-j5w_WVOKSajgHii5MPvN4jv8JPh14tsjSWEr6A2z7fh4Osr" style="object-position: center 20%;"/>
+                    </div>
+                </section>
+                <!-- Features Icons -->
+                <section class="grid grid-cols-2 md:grid-cols-4 gap-8 py-8" data-purpose="features">
+                    <div class="flex flex-col items-center text-center space-y-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-warm-brown/10 rounded-full text-warm-brown">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-lg">Café de Especialidad</h3>
+                        <p class="text-[11px] text-gray-500 leading-tight">100% Arábica tostado por productores + extracción precisa.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center space-y-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-warm-brown/10 rounded-full text-warm-brown">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-lg">Panadería Matutina</h3>
+                        <p class="text-[11px] text-gray-500 leading-tight">Croissants, danesas, tartas y focaccias horneadas en casa.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center space-y-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-warm-brown/10 rounded-full text-warm-brown">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-lg">Desayuno Todo el Día</h3>
+                        <p class="text-[11px] text-gray-500 leading-tight">Extendé tu mañana: clásicos servidos hasta el cierre.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center space-y-3">
+                        <div class="w-12 h-12 flex items-center justify-center bg-warm-brown/10 rounded-full text-warm-brown">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-lg">Retiro Rápido</h3>
+                        <p class="text-[11px] text-gray-500 leading-tight">Pedí online y retirá en solo 15 minutos.</p>
+                    </div>
+                </section>
+                <!-- Menu Highlights Header -->
+                <section class="space-y-6" data-purpose="menu-highlights">
+                    <div class="flex justify-between items-end border-b border-gray-200 pb-4">
+                        <h2 class="font-serif text-3xl">Destacados del Menú</h2>
+                        <p class="text-[10px] uppercase tracking-widest text-gray-400">Menú completo disponible en tienda y online.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Espresso Creations Card -->
+                        <div class="relative group overflow-hidden rounded-2xl aspect-[4/5]">
+                            <img alt="Creaciones de Espresso" class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP87bPnCcgwaTaS-bqniQTPEGJ_a7IWb_q1aCE_4NJOntlwn4X2PTsmrINNCsZgcKI2Y_TXwBmv7B0PpvCJF8qtzVOg9LrWholSwDENy6hDp3uZdnBh08PZ2py8diHZJ3WZE3xzeIFUa6SKtyP5j92IquPSugpSA6m12bny9bTdsF5oY7K3v8pgsdHyfAGD6CWvc5iMo-uZ-IRj9CLtmsK9wTNh9LF34rjvew4LUgnC-RB4i0znqLfS0680u6DCvPOj1vrbf3-FRO2"/>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <h4 class="font-serif text-xl mb-1">Creaciones de Espresso</h4>
+                                <p class="text-[10px] opacity-80">Desde cappuccinos sedosos hasta intensos cafés de autor.</p>
+                            </div>
+                        </div>
+                        <!-- Signature Cupcakes Card -->
+                        <div class="relative group overflow-hidden rounded-2xl aspect-[4/5]">
+                            <img alt="Cupcakes de Autor" class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Np_CMUSnjqI7P8SfbfSp7A4XnKaCPy3a6sNNfaDiQYF8uBfZMvNP9nt0BfpIH4hdxnGEQSWTWcHF39GYeCyn-g9wlfMB5oNgdI2iT8e3jdUUmieF8kf2VjKSifGXUGuE-UxZaom_BHDjlVau5cJHjc_Y1VPGclT9St3OWXwzdRDXRJmWvRtQLtyKlTh7n6GhUG1mWTCEj6gjvtvQ-TCp_YgKB4CgsUtDEP3YoyR3WZYhLaWFIXLVneIoDVLJVEp1Fuu4V5rVTTBX"/>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <h4 class="font-serif text-xl mb-1">Cupcakes de Autor</h4>
+                                <p class="text-[10px] opacity-80">Esponjosos, glaseados y disponibles en sabores de estación.</p>
+                            </div>
+                        </div>
+                        <!-- Brunch Toasts Card -->
+                        <div class="relative group overflow-hidden rounded-2xl aspect-[4/5]">
+                            <img alt="Tostados de Brunch" class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw9ULTFmeo7NVQCUquDiCOXq6o8MkhtR0fxtaYM1umtql1RaaYgZi6Iim_cMVjX7hVjGpaUVr86kxAc50KDDArwmdNa_3pm7BNjI8WspG86Lp5RuIsa9Sb_hBHorGFzJoKmPxkcyHWrRlqd-RQaiVJlU2vdUJMK_AW5PLnOKHQnYZIsadeQRyrnOhTT0X9EiLG_aoXRX8ZltFATu6SS_SiuXGSuVOf9bBV98KBjszVyyK6FHA7z1bl9urFjcXLE1X7ISw70Y9RJera"/>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <h4 class="font-serif text-xl mb-1">Tostados de Brunch</h4>
+                                <p class="text-[10px] opacity-80">Palta e ingredientes frescos sobre masa madre crujiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Detailed Menu List -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 items-start" data-purpose="menu-list">
+                    <div class="space-y-8">
+                        <h2 class="font-serif text-3xl">Creaciones de Espresso</h2>
+                        <div class="space-y-6">
+                            <!-- Menu Item -->
+                            <div class="group">
+                                <div class="flex justify-between items-baseline border-b border-gray-200 pb-1">
+                                    <h5 class="font-serif text-lg font-medium">Espresso</h5>
+                                    <span class="text-gray-500 text-sm font-medium">$3.50</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1 italic">Doble shot, clásico o de origen único</p>
+                            </div>
+                            <!-- Menu Item -->
+                            <div class="group">
+                                <div class="flex justify-between items-baseline border-b border-gray-200 pb-1">
+                                    <h5 class="font-serif text-lg font-medium">Cappuccino</h5>
+                                    <span class="text-gray-500 text-sm font-medium">$4.00</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1 italic">Microespuma sedosa, shot equilibrado</p>
+                            </div>
+                            <!-- Menu Item -->
+                            <div class="group">
+                                <div class="flex justify-between items-baseline border-b border-gray-200 pb-1">
+                                    <h5 class="font-serif text-lg font-medium">Flat White</h5>
+                                    <span class="text-gray-500 text-sm font-medium">$4.50</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1 italic">Café intenso, leche aterciopelada</p>
+                            </div>
+                            <!-- Menu Item -->
+                            <div class="group">
+                                <div class="flex justify-between items-baseline border-b border-gray-200 pb-1">
+                                    <h5 class="font-serif text-lg font-medium">Americano</h5>
+                                    <span class="text-gray-500 text-sm font-medium">$3.50</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1 italic">Audaz, suave, negro largo</p>
+                            </div>
+                            <!-- Menu Item -->
+                            <div class="group">
+                                <div class="flex justify-between items-baseline border-b border-gray-200 pb-1">
+                                    <h5 class="font-serif text-lg font-medium">Latte</h5>
+                                    <span class="text-gray-500 text-sm font-medium">$4.50 / $5.00</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1 italic">Clásico / Saborizado (caramelo, vainilla)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden aspect-square md:aspect-auto md:h-full">
+                        <img alt="Latte Art" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkcVgN1z5CQIZ5GqLqgo5K7nSI5MZS69WD179iuNp6a9CGKmTH5BpsNovo5rDJXfBS1qwU2zCihHG8vO2v7FxpTx2xc5jZAx-W0hHXSYw1AWfuSlmiwKPgAscneXJdz6ZX7_sZTAPxgihCp3oYozn4BLSTa8Sd4DwIe9ru-7OeaduajJBo76HJDHQbgr-ivQzSlmnvSBwnxmOzqEMxECuimLqXz9Fwff-hRgLGs0tmgZD0VZk0vtHanooHhK2nFzBsjZjQVZMg1NTN"/>
+                    </div>
+                </section>
+            </div>
+            <!-- END: Hero & Left Column -->
+            <!-- BEGIN: Right Sidebar -->
+            <aside class="col-span-12 lg:col-span-4 space-y-8">
+                <!-- Interior Image -->
+                <div class="rounded-3xl overflow-hidden aspect-[3/4]">
+                    <img alt="Interior del Café" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Tbuj5h6TRWdeAAdqzo2IgK2XT5X4Yp2h7DEc8rhE96vCOLebi_Lbyqm6zddhFFWtNHqSTM-Ou_t0nB_bGkScdp7UJ2T1hxSgt_ei9bsizxexhksm8ycWBs2eU_4hloQJx-xYTbht-0obSdE9X-kQJE1awMFLSb9haoJp_dsqwdh6OvziM_kkUi3s7Voz6ePRVd8hTruYavF4BkqZKQp25q-hB6qnRZNHdOUPno9E4JymvYHa2gbJVD18YbUL7fvIHQRe5Mio4Dw7"/>
+                </div>
+                <!-- Testimonials -->
+                <div class="space-y-6">
+                    <div class="bg-white/50 p-8 rounded-2xl border border-white/80 space-y-4">
+                        <svg class="w-6 h-6 text-warm-brown" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C20.1216 16 21.017 16.8954 21.017 18V21C21.017 22.1046 20.1216 23 19.017 23H16.017C14.9124 23 14.017 22.1046 14.017 21ZM14.017 21C14.017 19.8954 13.1216 19 12.017 19H9.01701C7.91244 19 7.01701 19.8954 7.01701 21V23C7.01701 24.1046 7.91244 25 9.01701 25H12.017C13.1216 25 14.017 24.1046 14.017 23L14.017 21ZM14.017 13.017C14.017 11.1392 14.017 9.26145 14.017 7.38367C14.017 5.50589 15.5229 4 17.3837 4H20.6503C22.5111 4 24.017 5.50589 24.017 7.38367V10.6503C24.017 12.5111 22.5111 14.017 20.6503 14.017H17.3837C15.5229 14.017 14.017 12.5111 14.017 10.6503L14.017 13.017Z" transform="translate(-5, -5)"></path></svg>
+                        <p class="font-serif italic text-lg leading-relaxed">"El mejor croissant de almendras de la ciudad. El café es siempre excelente."</p>
+                        <p class="text-[11px] uppercase tracking-widest text-gray-400">— Jaimie R.</p>
+                    </div>
+                    <div class="bg-white/50 p-8 rounded-2xl border border-white/80 space-y-4">
+                        <svg class="w-6 h-6 text-warm-brown" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C20.1216 16 21.017 16.8954 21.017 18V21C21.017 22.1046 20.1216 23 19.017 23H16.017C14.9124 23 14.017 22.1046 14.017 21ZM14.017 21C14.017 19.8954 13.1216 19 12.017 19H9.01701C7.91244 19 7.01701 19.8954 7.01701 21V23C7.01701 24.1046 7.91244 25 9.01701 25H12.017C13.1216 25 14.017 24.1046 14.017 23L14.017 21ZM14.017 13.017C14.017 11.1392 14.017 9.26145 14.017 7.38367C14.017 5.50589 15.5229 4 17.3837 4H20.6503C22.5111 4 24.017 5.50589 24.017 7.38367V10.6503C24.017 12.5111 22.5111 14.017 20.6503 14.017H17.3837C15.5229 14.017 14.017 12.5111 14.017 10.6503L14.017 13.017Z" transform="translate(-5, -5)"></path></svg>
+                        <p class="font-serif italic text-lg leading-relaxed">"Vibra acogedora, equipo amable y una playlist matutina perfectamente curada."</p>
+                        <p class="text-[11px] uppercase tracking-widest text-gray-400">— Carlos D.</p>
+                    </div>
+                </div>
+                <!-- Sidebar Photos Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="aspect-square rounded-2xl overflow-hidden">
+                        <img alt="Haciendo Café" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQaybVY6ne_Iw7AhtVCz-oSG5nLsCEWB468SaHyayCrljdH-Usb7s41KLAuJ_gnyDc-PBIsprklw2ZDEKwj8U4agGXXwxLGSlDRf1erxfiJJ80ahRja8TBV8tiMydTYbyzXJ4vTul9cEM3Po2Oxd81eZggwWYcHBDMZmd1hyGVmDAMLKzDdezUC7l7zttqLbfqLfNOwqZbIB6kitqBS2liEQ9g7Heo68BvYrymsqkJN5RfCnxSCv4i8Yw2_vxI5E2HJSjTcE7Wsfts"/>
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden">
+                        <img alt="Pastelería servida" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyXcsOITBoRsre3pIeI2_07_jDrXBbPRWoTkMDGW9jPPdsUqKMyeoUKj5Ll1jizsz4yzOU8quFRfmbhMIW_MaxJ2O0eElYea4HcVq449279uxnzYroi34FLbAkuxVWremVLPvnT66DkUMTZs6T47i8j0Qt-9bR9yj6oAVQnmO5XBs76Bir0u8BR7Dj9rCE58BGPB1AIFwS9o5oPcCpQAEm0BUTxdh36pakLNr0b5tTMslEKQiNSXrkj-aVlEw6UrZY69c3K1jdxcIX"/>
+                    </div>
+                </div>
+                <!-- Events & Catering Section -->
+                <section class="bg-forest-green text-white p-10 rounded-3xl space-y-4" data-purpose="events-catering">
+                    <h2 class="font-serif text-3xl">Eventos y Catering</h2>
+                    <p class="text-sm text-white/70 leading-relaxed">Bandejas de desayuno, coffee breaks y cajas de pastelería de estación para equipos y reuniones privadas.</p>
+                    <button class="text-xs font-semibold uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-colors">Consultar ahora</button>
+                </section>
+            </aside>
+            <!-- END: Right Sidebar -->
+        </div>
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer class="bg-forest-green text-white/60 py-12 mt-12" data-purpose="main-footer">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-6">
+            <div class="flex items-center justify-center space-x-2">
+                <div class="w-3 h-3 bg-white/30 rounded-full"></div>
+                <span class="font-serif text-lg tracking-wider uppercase text-white">Panadería / Café</span>
+            </div>
+            <p class="text-xs uppercase tracking-[0.2em]">123 Morning Lane, Valle del Café • Abierto todos los días 7am — 6pm</p>
+            <div class="pt-6 text-[10px]">
+                © 2023 Panadería / Café. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+</body>
+</html>

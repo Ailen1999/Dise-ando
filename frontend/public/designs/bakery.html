@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Panadería - Horneado con Frescura, ¡Solo para Ti!</title>
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                bakeryCream: '#F1E9DA',
+                bakeryBrown: '#6F4E37',
+                bakeryDarkBrown: '#4E3629',
+                bakeryLightCream: '#FAF7F2'
+              },
+              fontFamily: {
+                serif: ['"Playfair Display"', 'serif'],
+                sans: ['Montserrat', 'sans-serif'],
+              }
+            }
+          }
+        }
+    </script>
+    <style data-purpose="custom-typography">
+        h1, h2, h3 {
+          font-family: 'Playfair Display', serif;
+        }
+        body {
+          font-family: 'Montserrat', sans-serif;
+          background-color: #F1E9DA;
+        }
+        .btn-brown {
+          background-color: #6F4E37;
+          color: white;
+          transition: background-color 0.3s ease;
+        }
+        .btn-brown:hover {
+          background-color: #4E3629;
+        }
+    </style>
+</head>
+<body class="text-bakeryDarkBrown overflow-x-hidden">
+    <!-- BEGIN: MainHeader -->
+    <header class="w-full bg-bakeryCream/80 backdrop-blur-sm sticky top-0 z-50 py-4 px-8 border-b border-bakeryBrown/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="flex flex-col items-center">
+                <span class="text-xs uppercase tracking-widest opacity-60">Hecho a mano diariamente</span>
+                <h1 class="text-3xl font-bold tracking-tighter">BAKERY</h1>
+                <div class="h-0.5 w-full bg-bakeryBrown mt-0.5"></div>
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
+                <a class="hover:text-bakeryBrown transition-colors" href="#">Inicio</a>
+                <a class="hover:text-bakeryBrown transition-colors" href="#">Menú</a>
+                <a class="hover:text-bakeryBrown transition-colors" href="#">Nosotros</a>
+                <a class="hover:text-bakeryBrown transition-colors" href="#">Contacto</a>
+            </nav>
+            <!-- CTA Button -->
+            <div>
+                <a class="btn-brown px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest" href="#">Pedir ya</a>
+            </div>
+        </div>
+    </header>
+    <!-- END: MainHeader -->
+
+    <!-- BEGIN: HeroSection -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-bakeryLightCream">
+        <!-- Visual background elements representing the hero composition in the image -->
+        <div class="absolute inset-0 z-0">
+            <img alt="Medialunas recién horneadas" class="w-full h-full object-cover opacity-90" data-purpose="hero-background-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9p1MCDxd2e6wof-QKbxNR3cOXRaXu-N81AzExhXXr7IOYo51ti9M-sgtFfL2M9Nx_EZhxQUCo_YA5S8UXFIaDpdc83jHcZEemH2AuPpRSCBIfaVJCYBPJ4KFOknqo7QSHftHEmhrh7JS7ND3AUl-60ZM9-Q0dkLv4k1tpmTsrRBvr0SFAzfMM3BCLb5oc_pNK7r1mdMxtszWArIwbAGBxj9t7TZMiunKhlWOka2V1pqXMKdxBxPJF_8hcy0xVAGtJucae5k2G_HuD"/>
+        </div>
+        <!-- Hero Text Content Box -->
+        <div class="relative z-10 max-w-2xl text-center bg-white/40 backdrop-blur-md p-10 md:p-16 rounded-sm shadow-sm border border-white/50">
+            <span class="text-xs uppercase tracking-widest mb-4 block opacity-70">Tradicional & Auténtico</span>
+            <h2 class="text-5xl md:text-7xl mb-6 font-bold leading-tight">¡Recién horneado, solo para ti!</h2>
+            <p class="text-sm md:text-base mb-10 opacity-80 leading-relaxed max-w-md mx-auto">
+                Disfruta del calor de nuestros productos recién salidos del horno, elaborados con los mejores ingredientes y una pizca de amor cada mañana.
+            </p>
+            <a class="btn-brown px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest inline-block" href="#">¡Pedir ya!</a>
+        </div>
+    </section>
+    <!-- END: HeroSection -->
+
+    <!-- BEGIN: WhyChooseUs -->
+    <section class="py-24 px-8 bg-bakeryCream">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4 relative inline-block">
+                    ¿Por qué elegirnos?
+                    <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-bakeryBrown"></span>
+                </h3>
+                <p class="mt-8 max-w-2xl mx-auto text-sm opacity-70 leading-relaxed">
+                    Creemos en la calidad sobre la cantidad. Cada pan y pastel se hace a mano utilizando métodos artesanales pasados de generación en generación.
+                </p>
+            </div>
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artisan Breads -->
+                <div class="bg-bakeryLightCream overflow-hidden shadow-sm group">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Panes Artesanales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5Wu-J7OMee8OapS4hkbFTe95K2RxORoBvliA7QbOGwtxeKFpxFIUGVSDfubKC6jBWmhrjlMOy7ut6ojIVcfp4lStTRNB3QPUNP3-0KxGXZdn9MYV7KfAR-4_5MusR5sRIJwImWDU42TJRBCquAlo7cjZqFbKMXo44_xbacdssbR0Lixhif_7FAlhuGeaWSOLu1HW4XIk6hhPCCGVO97M3vqPE6HbOU-q7j0I-FMKtTyLCQVtgYFICJ_ciLgqS_AWC_nGPE-PHgWe"/>
+                    </div>
+                    <div class="p-8 text-center bg-[#FAF7F2]">
+                        <h4 class="text-2xl font-serif mb-4">Panes Artesanales</h4>
+                        <p class="text-xs opacity-60 mb-6 leading-relaxed">Corteza crujiente, centros suaves y aireados. Nuestra masa madre fermenta durante 24 horas.</p>
+                        <a class="btn-brown inline-block px-6 py-2 rounded-full text-[10px] uppercase font-bold tracking-widest" href="#">Ver más</a>
+                    </div>
+                </div>
+                <!-- Sweet Pastries -->
+                <div class="bg-bakeryLightCream overflow-hidden shadow-sm group">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Pastelería Dulce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnMFhMR9iWD7vyqZMDWtU4pxftVHhhsTQvBD_sBw0sna8LaKyFCP5a8f2gp04tbkFdBV7VERySd250hHbp4hS74EB0H7n_VEjPzCBY1tf0FyX7gnZv-vrB6dYUMnMdzT-B0KY_9-Nw4bTeLtQRAKeAxUHaGcl9vkhxevTvpGd3hIn97M0bF5p2IadfTstgc3E5RTGZRgx_2phem-IE7kcwAs9W7M3nNejb0SMxTcUrU_eEkSgsE60B1l0F1d2VkAO5xVVOGNQ5BJ0w"/>
+                    </div>
+                    <div class="p-8 text-center bg-[#FAF7F2]">
+                        <h4 class="text-2xl font-serif mb-4">Pastelería Dulce</h4>
+                        <p class="text-xs opacity-60 mb-6 leading-relaxed">Capas mantecosas y hojaldradas rellenas de frutas frescas, cremas y chocolate premium.</p>
+                        <a class="btn-brown inline-block px-6 py-2 rounded-full text-[10px] uppercase font-bold tracking-widest" href="#">Ver más</a>
+                    </div>
+                </div>
+                <!-- Custom Cakes -->
+                <div class="bg-bakeryLightCream overflow-hidden shadow-sm group">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Tortas Personalizadas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4qSdnPB7wDoH5gsXDw0-hYzK5X5QjQi2F9gzqxREdpMtmY7BD67bJm2436QRZshij65dfmP6h_gY6SHVy0NrW9C4gt8y-R5T2b_zgEHeBenS3SodIsvMqCGS2dXR0X93XgLbiIzLx5pG2ORCmtKQEa8eYqyI8RPWGVkyhFRac0fRsasV4-ZBpJt7z022M1wZeIlGwrmuEzzW-xrQyF8crWRh26vqi7xphmzZIceqFqNSoQOJmpT7pxSc0_9PZfKpYq3bR3n2Nw1E6"/>
+                    </div>
+                    <div class="p-8 text-center bg-[#FAF7F2]">
+                        <h4 class="text-2xl font-serif mb-4">Tortas Personalizadas</h4>
+                        <p class="text-xs opacity-60 mb-6 leading-relaxed">Perfectas para tus ocasiones especiales. Diseños elegantes y sabores exquisitos.</p>
+                        <a class="btn-brown inline-block px-6 py-2 rounded-full text-[10px] uppercase font-bold tracking-widest" href="#">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: WhyChooseUs -->
+
+    <!-- BEGIN: VisitUsSection -->
+    <section class="py-24 px-8 bg-bakeryLightCream">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <!-- Left: Text Content -->
+            <div class="md:w-1/2">
+                <h3 class="text-4xl font-bold mb-6">Visítanos hoy</h3>
+                <p class="text-sm mb-4 opacity-70 leading-relaxed">
+                    Ven a sentir el aroma del pan recién horneado. Estamos en el corazón de la ciudad, repartiendo sonrisas junto con café y pastelería.
+                </p>
+                <p class="text-sm mb-8 opacity-70 leading-relaxed">
+                    Abierto todos los días de 7:00 AM a 6:00 PM para tus antojos matutinos y meriendas.
+                </p>
+                <a class="btn-brown px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest inline-block" href="#">Visítanos hoy</a>
+            </div>
+            <!-- Right: Collage Placeholder -->
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="aspect-square">
+                    <img alt="Donas" class="w-full h-full object-cover rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDofz-YbuGaMSyxmKRrQFPWXW6ZWqWdPSHoGDtJXB9V9pZNmFO6cAG9RCYV5yOoz0bEO83iIPwlm5v-Yk6qX_r4og8Z0xefvCdFXgZkodkP-QnhKjhIhXkB26SMQZKcHveVnxnH6erY1seYFD2IpkwTvB_GngiPp-jj3x6gvN2wYmzAcNX1q6RqaFAt-HfnT9TnRsrYEqKIckpqaxbnHcXoTk2kSBmtiL5KA9zn2Nqfczx2oXgF0qB6cy3qkF2up1xA9-5beHy0aEZZ"/>
+                </div>
+                <div class="aspect-square">
+                    <img alt="Tartas" class="w-full h-full object-cover rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCz90qHoGgCI_nQWVLJvibAjSN_yfKA6uhNa09OnSz0Tn14nWFJd7iaRy1WA54Iut-wW-v0eVxLVlADTq53dB4dRJ30HpbAVQp_UJb1c2f9M2wtyTKAFHxaATJQwqgZyIVpLFlAY5m0M4vtbfsvw8U1y7CE86a1XE5KRbxWxLVskr7hQ2Wk6NvWhTu-609ZF7BaB90fXhrtDw192rBmH1GGkfXAhf7roWEkPhIpyDSXg2XOkeI-CAW1ezY5j5kLm-4jIfrm2RwNVzS"/>
+                </div>
+                <div class="col-span-2 aspect-[2/1]">
+                    <img alt="Interior de la panadería" class="w-full h-full object-cover rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC65V-9jfiZ8x-ZBKDqZ6WxdLUSJiXPYLTdUC8Z10ATi3OnFaLhL4aTY08eGHapsQvb9dE4XglC3-5EImXTsq4iQFlkuJnJmWswZL7WiLnMJMBQT0HZLGryto93WYARn970xrXx2Ojw9vIigGtblL3DCMyIOIS5uM_tbVpY7EKRf_JYdP4iAXTopywr-vcy0OOdCncR5h6-AoU4odkjfSzny84tnoz31VY0FFoPzrE3YgNO3wEvvtuFHmFOCl8YnzDig0uY2cOrz1oA"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: VisitUsSection -->
+
+    <!-- BEGIN: GallerySection -->
+    <section class="py-24 px-8 bg-bakeryCream">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="aspect-square overflow-hidden group">
+                    <img alt="Rol de canela" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXCgJP0IAbJm6uMOv--WmvCdfvV3qTh9E8iLhmEhlkru8zoPxW5SNgKK0v4e8CvHWEd6jLJhQMq4_G4SIrcoX988YSJnM9AWrMiqIMoh64Pb1x8SP5gggLdjjkKGPTD25EYh6FW_bW__30cfkXrvUlcXNDCzLiO5gxsHBCWLauyOSOzl0xBubSC_WFjH8N8IlJbG31ScQGzl-TutMulffqOBBW5I_ADJ9shoNgtQvS-IpI06m9OkLDUA7QmOh5ugYq_clykBjfeEr7"/>
+                </div>
+                <!-- Item 2 -->
+                <div class="aspect-square overflow-hidden group">
+                    <img alt="Muffins" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZaMp0T1YpIqkzAFrkEh01txtBCJpBLekT0uWz9nyORUBdQb6Jrym28m6M0yKdpS8D0qwIA6-9KYLodOyssfZQl6I9RMP9A2XwiHuSgv7_wFWpp-xgAHw-A6rVqTJkpv6hRzIB_lcx9Yt70RBPIBCwlVUKaH6UCYEwEkjoWk64iBUe9qLJOkcdRBml8XCSqr6BBNQ16eJc961nNy4kvvvAeoY7psrLxwQwcnWtGIN9lnRZ3Rg3sTN6rIX9mA82XRKK8hK5qu57eHYF"/>
+                </div>
+                <!-- Item 3 -->
+                <div class="md:col-span-1 aspect-square overflow-hidden group bg-white p-4">
+                    <div class="h-full w-full overflow-hidden">
+                        <img alt="Torta insignia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFpagbNWUtwacc_u99CfxGKOG_4JfRYvi9CjDoSk-xSVtxpSszTT423zM_Vb6BiwBZ6TekWg30KTAheYdGuStReSzl2YhbHhWK7BtlChlEGOgZxX10y_vVE5ysoTHGCy83ps7g-IqgGCtyeIu06gPOvMT_f_AlHdq0lHn_4AG2UsXD4kZ3cclfllhNoQLQJXEX5hcR7Kcia7bEyFgYEUTF6Xbf16Wceoy7fhC1JDJkEnFkZ9y2j_6zGw47AM6pC-7no-QsVllfgFTk"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Gallery Labels -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 pt-12 border-t border-bakeryBrown/20">
+                <div class="text-center md:text-left">
+                    <h5 class="font-serif text-xl mb-2 italic">Captura el Horneado</h5>
+                    <p class="text-[10px] opacity-60">Llevamos el arte de la panadería tradicional a tu puerta.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h5 class="font-serif text-xl mb-2 italic">Comida Refinada</h5>
+                    <p class="text-[10px] opacity-60">Saborea cada bocado de nuestras sensaciones dulces meticulosamente elaboradas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: GallerySection -->
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-bakeryDarkBrown text-bakeryCream py-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <h2 class="text-2xl font-bold tracking-tighter">BAKERY</h2>
+                <p class="text-xs opacity-50 mt-1">© 2023 Artesanos de la Panadería. Todos los derechos reservados.</p>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a class="hover:opacity-70 transition-opacity" href="#">Instagram</a>
+                <a class="hover:opacity-70 transition-opacity" href="#">Facebook</a>
+                <a class="hover:opacity-70 transition-opacity" href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+</body>
+</html>

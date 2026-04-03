@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Patisserie - Panadería y Pastelería de Lujo</title>
+    <!-- Tailwind CSS CDN with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts for the boutique feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'brand-pink': '#FDE2E4',
+                'brand-dark-pink': '#D81B60',
+                'brand-gold': '#C5A059',
+                'soft-white': '#FFFBFC',
+              },
+              fontFamily: {
+                serif: ['Playfair Display', 'serif'],
+                script: ['Great Vibes', 'cursive'],
+                sans: ['Montserrat', 'sans-serif'],
+              },
+            }
+          }
+        }
+    </script>
+    <style data-purpose="typography">
+        .font-boutique-title { font-family: 'Great Vibes', cursive; }
+        .font-serif-heading { font-family: 'Playfair Display', serif; }
+        .font-standard-sans { font-family: 'Montserrat', sans-serif; }
+        
+        .ornamental-divider {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: #C5A059;
+        }
+        .ornamental-divider::before,
+        .ornamental-divider::after {
+          content: '';
+          flex: 1;
+          border-bottom: 1px solid #C5A059;
+        }
+        .ornamental-divider:not(:empty)::before { margin-right: 1rem; }
+        .ornamental-divider:not(:empty)::after { margin-left: 1rem; }
+    </style>
+    <style data-purpose="layout-decorations">
+        .circular-hero-border {
+          border: 1px solid #C5A059;
+          padding: 10px;
+        }
+        .card-shadow {
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-gray-800 font-standard-sans">
+    <!-- BEGIN: MainHeader -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <h1 class="font-boutique-title text-3xl text-brand-dark-pink">Patisserie</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8 uppercase text-xs font-semibold tracking-widest text-gray-600">
+                <a class="hover:text-brand-dark-pink transition-colors" href="#">Inicio</a>
+                <a class="hover:text-brand-dark-pink transition-colors" href="#">Menú</a>
+                <a class="hover:text-brand-dark-pink transition-colors" href="#">Tortas</a>
+                <a class="hover:text-brand-dark-pink transition-colors" href="#">Pastelería</a>
+                <a class="hover:text-brand-dark-pink transition-colors" href="#">Contacto</a>
+            </nav>
+            <div>
+                <a class="bg-brand-dark-pink text-white px-6 py-2 rounded-full text-xs font-bold tracking-tighter uppercase hover:bg-opacity-90 transition-all" href="#">
+                    Pedir ahora
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- END: MainHeader -->
+
+    <!-- BEGIN: HeroSection -->
+    <section class="relative bg-brand-pink pt-16 pb-24 overflow-hidden" data-purpose="hero-banner">
+        <div class="absolute left-0 top-10 opacity-20 w-1/4 hidden lg:block">
+            <img alt="Decoración floral" class="w-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSfDu6KOoBKOqlPZz-nfDrSGEs6gbmrchGBCGKwVYRD1Ce4rRTVyLr5qXAsJH93g8qkNi-hfN29k_JNwGYGZ2PAhxcNwgQQHm3Trkv1IuHLssmTLoT6jOg9miXLl2jv-v9dZPJwKM1dTzWwrfet5-osEc5kNrL7u03QsyonQKGnFC32mCkk-VBxPVYMgEpLJ0QHABOW3gpGo0iHtcngy3dKhMzmhECZafzvXc3bfqTKY47godKvTvQuRz0Xcp8h1Qa2JwQo_a_GT2m"/>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="inline-block rounded-full bg-white circular-hero-border mb-8">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full flex items-center justify-center border border-brand-gold overflow-hidden">
+                    <img alt="Patisserie Logo Graphic" class="w-4/5 h-4/5 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl5Z8UZmZbQH63zF_o7t8GvyNkEAnn-EnZWUH6XZugxgfCd_klZLybWs-3N5w7rj7HSvLYOQhY8wqpv0WYYJXgAoSTwc5g179bT0ycD4LvS63C1JYFYo1BNpD9ojrZdm-y09CgE1n0VUI5Bti0mbGdasUpB1AKqlx0xesY7Z1L-DcSyIpAvh7Ncudz01Ki5Jicb_wusNRtpls7pP05qSRAzJHuXB9Qshzbj7EGy4bTIfRfw2MmA-Gg-8gfuH29B-rt_kuWqxcCZkjA"/>
+                </div>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <p class="font-boutique-title text-4xl text-brand-gold mb-2">Deleite en</p>
+                <h2 class="font-serif-heading text-5xl md:text-7xl font-bold text-gray-900 uppercase tracking-tighter mb-4">
+                    ¡Cada bocado!
+                </h2>
+            </div>
+        </div>
+    </section>
+    <!-- END: HeroSection -->
+
+    <!-- BEGIN: CategoriesGrid -->
+    <section class="py-20 bg-soft-white" id="categories">
+        <div class="container mx-auto px-4">
+            <div class="ornamental-divider font-serif-heading text-2xl uppercase tracking-widest mb-16 max-w-xl mx-auto">
+                Nuestras especialidades
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <article class="flex flex-col items-center text-center group" data-purpose="category-card">
+                    <div class="mb-6 overflow-hidden rounded-lg w-full aspect-square bg-gray-100 card-shadow">
+                        <img alt="Tortas personalizadas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5dnVU2pPn-F32AWjX8ojJ-VFeCuZE3bsEYGfX4-mgAu0_SVrGVeCXqXo5YcoS3hc02nMHRAHqnPoiOVuPHg4tZM2bWWTFVJy2lpMsSMue3bQuIcTTKZoFykwru4xDrE5EBRrmFvMmEntJRu_XeA_aYYZiGTqQsGe1HYEbD0ezc2wmQIGwySCss7E3TDOAqzQaCutQtIh5f9bJL6nyOrsBhxTc5OhBzIH6Nt9SynfFa0870E-jjH5hWtObKXQlcuW_hiluFWD91YWe"/>
+                    </div>
+                    <h3 class="font-serif-heading text-2xl font-bold mb-3">Tortas personalizadas</h3>
+                    <p class="text-gray-500 text-sm mb-6 px-4">Obras maestras artesanales diseñadas específicamente para tus celebraciones más queridas.</p>
+                    <button class="border border-brand-gold text-brand-gold px-8 py-2 text-xs font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-white transition-all">
+                        Presupuesto
+                    </button>
+                </article>
+                <article class="flex flex-col items-center text-center group" data-purpose="category-card">
+                    <div class="mb-6 overflow-hidden rounded-lg w-full aspect-square bg-gray-100 card-shadow">
+                        <img alt="Macarons elegantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALdMgTDDMKokkHieIG065H42hlEeNi7wLfA0GlGrsVN5g6UdP_RYZhMwdfTqsTqaT1Wi8BF-VwLNG7XXLRdLdhvOME7Pdi4a1q647hsJmlb52rXIhx5B2ju3SXcDxCrZ6cwmD_eEMLLmCInm8MWRXgHV4V52rs6ZdeeRzbgThRUjhYkZguAuFsQ9x2WjiFsEVQ5cC-nZ1ZenhZ916PWWovJjFHQdv3TSOTV2To2tnVmz6w5usYuKo7hY-hnAcNY8ZIsunFybZtSeCU"/>
+                    </div>
+                    <h3 class="font-serif-heading text-2xl font-bold mb-3">Macarons</h3>
+                    <p class="text-gray-500 text-sm mb-6 px-4">Un clásico parisino con un crujido delicado y un centro que se deshace en la boca.</p>
+                    <button class="border border-brand-gold text-brand-gold px-8 py-2 text-xs font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-white transition-all">
+                        Pedir hoy
+                    </button>
+                </article>
+                <article class="flex flex-col items-center text-center group" data-purpose="category-card">
+                    <div class="mb-6 overflow-hidden rounded-lg w-full aspect-square bg-gray-100 card-shadow">
+                        <img alt="Colecciones de Cupcakes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7PnQRGJ94UIoRqJlqLNyV9wCyBSVKVCr0vafQ7wNlQT6TS83KewhdTFMflj_b1kSNO7f4Ml3zkMJbzLTclhPWHlPzFeQ812302_KU4vXtKeUVtZO0QKHsv_NFw41hOR9QJBOvz6V4YlGF3YPnP8uwuBVCvmwG6NNIX9gJJXPH7ys5TyjRGAcyDcx21hcIoi6WFpThqFEag5NtDtN1bsVn7XnGJEdXSa51ugDg9OKLQv1fDNGN2AVMpRMVrw8jeUKgHAUth3xx1sOS"/>
+                    </div>
+                    <h3 class="font-serif-heading text-2xl font-bold mb-3">Colecciones de Cupcakes</h3>
+                    <p class="text-gray-500 text-sm mb-6 px-4">Los bocaditos perfectos para regalar o darse un pequeño lujo cada día.</p>
+                    <button class="border border-brand-gold text-brand-gold px-8 py-2 text-xs font-bold tracking-widest uppercase hover:bg-brand-gold hover:text-white transition-all">
+                        Pedir hoy
+                    </button>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- END: CategoriesGrid -->
+
+    <!-- BEGIN: HolidayBanner -->
+    <section class="bg-brand-dark-pink py-16 text-white text-center" data-purpose="promotional-banner">
+        <div class="container mx-auto px-4">
+            <p class="font-boutique-title text-3xl mb-2">Especiales de temporada</p>
+            <h2 class="font-serif-heading text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6">Ya está aquí la colección de fiestas</h2>
+            <p class="max-w-xl mx-auto text-pink-100 mb-8 font-light italic">Celebra la magia de la temporada con nuestros dulces festivos de edición limitada, desde pan de jengibre especiado hasta tortas de menta aterciopeladas.</p>
+            <a class="inline-block bg-white text-brand-dark-pink px-10 py-3 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-brand-pink transition-colors" href="#">
+                Ver menú festivo
+            </a>
+        </div>
+    </section>
+    <!-- END: HolidayBanner -->
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <h2 class="font-boutique-title text-4xl text-brand-dark-pink">Patisserie</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mb-8 text-xs font-semibold uppercase tracking-widest text-gray-500">
+                <a class="hover:text-brand-gold" href="#">Nosotros</a>
+                <a class="hover:text-brand-gold" href="#">Información de envío</a>
+                <a class="hover:text-brand-gold" href="#">Política de privacidad</a>
+                <a class="hover:text-brand-gold" href="#">Términos de servicio</a>
+            </div>
+            <div class="text-brand-gold flex justify-center space-x-6 mb-8">
+                <a class="hover:opacity-75 transition-opacity" href="#"><span class="sr-only">Instagram</span>[Instagram]</a>
+                <a class="hover:opacity-75 transition-opacity" href="#"><span class="sr-only">Facebook</span>[Facebook]</a>
+                <a class="hover:opacity-75 transition-opacity" href="#"><span class="sr-only">Pinterest</span>[Pinterest]</a>
+            </div>
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">
+                © 2023 Patisserie Boutique. Todos los derechos reservados. Elaborado con amor y azúcar.
+            </p>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+</body>
+</html>

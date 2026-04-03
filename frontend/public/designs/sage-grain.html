@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5a7a54", // Sage Green
+                        "accent-wood": "#a67c52",
+                        "background-light": "#fdfaf6", // Cream
+                        "background-dark": "#1a1c19",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "handwritten": ["Georgia", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .handwritten-accent {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-primary rounded-lg text-white">
+                    <span class="material-symbols-outlined block">bakery_dining</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-primary dark:text-primary/90">Sage & Grain</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Menú</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Especiales del Día</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nuestra Historia</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Locales</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-xl transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-sm">shopping_basket</span>
+                    Pedir Online
+                </button>
+                <button class="md:hidden text-slate-900 dark:text-slate-100">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <section class="px-6 py-8 md:py-12">
+            <div class="relative overflow-hidden rounded-3xl min-h-[500px] flex items-center justify-center text-center p-8 bg-slate-200" data-alt="Interior de una panadería boutique moderna y acogedora" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfBxR6dg-sm810lspGmJ7lb7g_Aw-cYyv_PgBZBQcsg9NnVKPZITkueMVsyw1lLCwW1X3klUEC581eqIb9odHtr5DbZIZmALmeaZnVffovRwYuFsl-aFRj00NoB2SxfustQMaCdBpNT8qIj3CYnoEma66wPgj2k5QrnDLJpT5ZSvnXT6wIksEE-S3ikGEavbV12cPKaA13n961w4gs6NSjeljyihWjUpc-8MWFdc4W5HaZ7IHaDgVwRlUXmYgZFml7Noj8xOP3cJFh'); background-size: cover; background-position: center;">
+                <div class="max-w-2xl">
+                    <span class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-md text-white rounded-full text-sm font-semibold mb-6">Horneado fresco cada mañana a las 5 AM</span>
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+                        Recién Horneado, <span class="text-primary-foreground italic">Corazón</span> Comunitario
+                    </h1>
+                    <p class="text-lg text-white/90 mb-8 max-w-lg mx-auto">
+                        Viví la calidez de nuestra masa madre artesanal, pastelería delicada y café de especialidad en el corazón de tu barrio.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform shadow-lg">
+                            Ver Menú de Hoy
+                        </button>
+                        <button class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-50 transition-colors shadow-lg">
+                            Dónde Estamos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mosaic Gallery Section -->
+        <section class="px-6 py-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight">Nuestra Artesanía</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Amasado a mano, leudado lento y horneado con amor.</p>
+                </div>
+                <div class="text-primary font-handwritten text-xl italic handwritten-accent">
+                    #MomentosSageAndGrain
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div class="row-span-2 col-span-2 rounded-2xl overflow-hidden group relative">
+                    <img alt="Pan de masa madre fresco" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Hogaza de masa madre dorada sobre rejilla" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvnSDAOG3gA0Dfrj0FqfpN9fieZLaQVpRUKTAzC41LOL2mDUvhiixRVPvxNUGBJ-bV9BUdmxYVjGb_q2rnAOQS_475nJ9YHqqiEO4sQ-g8g01t9j4jFjMtmkD-z-dJ4isaheXubFJqyYcvOq0nl33itmd520xka6zaH9YUKPpgFtejFbnTGK8cyh8lgbo9oPSmoZhWAzQYruDlvg7Res6pWsUejDG1B5jGbEdm0cWqE8hK_C0okxqhc3Xa_I0m6oAYZE8PC-9Ac0pB"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold">Masa Madre de Autor</p>
+                    </div>
+                </div>
+                <div class="col-span-1 rounded-2xl overflow-hidden group relative">
+                    <img alt="Café arte latte" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Sirviendo arte latte en taza de cerámica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP498UzF_nT2R5ZjbvNVDvy4NipCJ8qtgnYbxyfgaZl0MIWPORhJWrT2CXCY3JQXz2b5w7NjOawMIpF-TgQqyNU-K1mt4nt_biiUC45f-DUBcpeXPclMi810Y8mW7rgP-SFRv_y1RdLwe9TYCsnqJa90uGIRtWEr8CLHc3_tCRdTNXwzsHXKvm8BAwpw5vuZGrnLcQWjZjZ9_xxT9rFEDa8gvbrqifEQebh1zQT1xBWtF8MRnHNPo7M8NKXzeZsnlfyYJXI_Yqu7PL"/>
+                </div>
+                <div class="col-span-1 rounded-2xl overflow-hidden group relative">
+                    <img alt="Cookies de chocolate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Pila de galletas con chispas de chocolate suaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwPSr1JvTxSVjq5fbfplrClDpdnp10xl1cA8rn5shnZq1Et9h4LonJppwv-4cc5s139v1LTdzThFbKkLGScx_TXiiLBUPUC4p4j7IAEYqa_92kbrK_91ZAUY6oSwWfKP3-OhlKq_seXQXcK_ChDcI04Ouxz27kYV24Hjzwb09OIxdfxF8Ed1Epd4K30BUdDjZJ9n7K51K4ga4uplyM_GjXdaRkInq_ezsBje0kU981jALd79SXzTzWTj1Ej5i_rNOBy5k7DYSfpsQP"/>
+                </div>
+                <div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden group relative">
+                    <img alt="Facturas frescas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Surtido de facturas francesas en vitrina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBphrhp8rwHSWYBpspKAHcI_UPKy4OVPCpS8yYfb9-pOlnI27eKonW7JnfYneJ1h45tJddwUwCzBELOVdYCqCbE6K1ZBI-o4vhqRx1xPvaSHhiUt_6_KS0pBWJrT7bY30R-gCfBT5pgDvbnF904jRxpGDUpJxgpylfEFt37lOcZMCJ7YyPpdQXWayXjiZi0VLEk5hEaT7p7LkVXUZf0XOLRlY6efcWU9lH2GADgeWXYKEz8UPdteGSmIhoNAnWftVbYiUDqhLSiebR7"/>
+                </div>
+                <div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden group relative">
+                    <img alt="Tarta de arándanos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Primer plano de una tarta frutal de arándanos frescos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbcYhH1eTAkTKSxuN2vyhtp4uhwLYI_hXnfcSb_I_KY6XpbVNSCBuoYGuiiH9GfW-pK3KXw2pkO5T2sQdXoge46pl0buKnCB5pxScIKX7VMxlSWCm_YDLHfeKobsxmcMao26j1FovE-8oadzXmyC0VkYtaKZeLGtnVEnccto0gkvgBbv7JAnUhFiOIBOKpEOu2z-JpUD2MxJmMYZLzpeUZLiFpaG9ptznEtoL5sCMA3yT30SPn91a0s9DEN5aUzBVmDW95ADUayjtS"/>
+                </div>
+            </div>
+        </section>
+        <!-- Daily Specials Section -->
+        <section class="px-6 py-16 bg-primary/5 dark:bg-primary/10 rounded-3xl mx-6 my-12">
+            <div class="text-center mb-12">
+                <span class="material-symbols-outlined text-primary text-4xl mb-2">auto_awesome</span>
+                <h2 class="text-3xl font-bold">Especiales de Hoy</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 handwritten-accent italic">¡Disponibles hasta agotar stock!</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Special 1 -->
+                <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-sm border border-primary/10 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="text-accent-wood font-handwritten text-lg handwritten-accent">$7.50</span>
+                    </div>
+                    <div class="mb-4 text-primary">
+                        <span class="material-symbols-outlined text-3xl">toast</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bollo de Miel y Lavanda</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        Masa de brioche trenzada con lavanda local y glaseado de miel silvestre.
+                    </p>
+                    <div class="flex items-center gap-2 text-primary font-semibold text-sm">
+                        <span class="material-symbols-outlined text-sm">timer</span>
+                        Horneado a las 8:00 AM
+                    </div>
+                </div>
+                <!-- Special 2 -->
+                <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-sm border border-primary/10 relative overflow-hidden group ring-2 ring-primary">
+                    <div class="absolute -top-1 -left-1 bg-primary text-white text-[10px] px-3 py-1 font-bold tracking-widest uppercase rounded-br-lg">
+                        Elección del Maestro
+                    </div>
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="text-accent-wood font-handwritten text-lg handwritten-accent">$12.00</span>
+                    </div>
+                    <div class="mb-4 text-primary">
+                        <span class="material-symbols-outlined text-3xl">skillet</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Tarta de Tomates Ancestrales</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        Hojaldre crujiente con ricota perfumada, tomates reliquia y pesto de albahaca fresca.
+                    </p>
+                    <div class="flex items-center gap-2 text-primary font-semibold text-sm">
+                        <span class="material-symbols-outlined text-sm">local_fire_department</span>
+                        Servido caliente
+                    </div>
+                </div>
+                <!-- Special 3 -->
+                <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-sm border border-primary/10 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4">
+                        <span class="text-accent-wood font-handwritten text-lg handwritten-accent">$6.00</span>
+                    </div>
+                    <div class="mb-4 text-primary">
+                        <span class="material-symbols-outlined text-3xl">local_cafe</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cold Brew Maple & Avena</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        12 horas de infusión en frío con espuma de avena artesanal con arce y canela.
+                    </p>
+                    <div class="flex items-center gap-2 text-primary font-semibold text-sm">
+                        <span class="material-symbols-outlined text-sm">ac_unit</span>
+                        Favorito de estación
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Instagram Feed Section -->
+        <section class="px-6 py-12">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined text-xl">camera_alt</span>
+                    </div>
+                    <h2 class="text-2xl font-bold">Seguí Nuestro Viaje</h2>
+                </div>
+                <a class="text-primary font-bold hover:underline" href="#">@sageandgrain</a>
+            </div>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-2">
+                <div class="aspect-square bg-slate-100 rounded-lg overflow-hidden group cursor-pointer">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Post de Instagram de hogazas frescas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQQFAfPKWh5opAVLfSZ2fVjzBUWoWQSgo-A9viL80-aI2glrAYiREgSLvaNjUnPQy9Qh29ewKbwHMZEIclFT8ocgG-YNBZATo-f-TP6ekD9xYLE26QPoKKhKOBatjC9EzD2W3Iq4mR35FDJ_wn0ltZDTGxnLQhtSNCe5Ld_v4-E7Pi-AWGSw1DFYBDinhUbnTHnz64x77MTOIJI-_sQ6XqqmD61L7vN10EDjeMcEvBZfbo_1yZ_BtRWq6xuxt5dWsOxTHAHoQqwGC1"/>
+                </div>
+                <div class="aspect-square bg-slate-100 rounded-lg overflow-hidden group cursor-pointer">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Post de Instagram del interior del café" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnkAasj2awCpOqKddt6lepJ_EFuFrMkMpfdFMwtj2wOVDKZrLb3315Dj5ZkwK4x6g1NnZENP1mXbbyOx9b_szsJlkoWf5EkMnwgHBVJzb8_5Op704sxUVYEtl2K3RDNLXag1-9RdLvm11WqU8OAM_vTNK8X8FAZUs1mXI97l86iR7zmyD69XSPsovCEJE_DSGLKXBPYTzJsFzfEouxWXnffcn_diYfp4uNwQGGl5_cK6p_9d-H3066L4iO8CaaIBkd0mfD1LDoRmzK"/>
+                </div>
+                <!-- ... resto de las imgs ... -->
+            </div>
+        </section>
+        <!-- Newsletter / Community Section -->
+        <section class="px-6 py-20 text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Unite a Nuestra Comunidad</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">Recibí acceso anticipado a los especiales semanales y talleres de panadería. Sin spam, solo cosas ricas.</p>
+            <form class="flex flex-col sm:flex-row gap-3">
+                <input class="flex-1 px-6 py-4 rounded-xl border-2 border-primary/20 bg-white dark:bg-background-dark focus:border-primary outline-none transition-all" placeholder="Tu correo electrónico" type="email"/>
+                <button class="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors" type="submit">
+                    Unite
+                </button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-zinc-900 px-6 py-16 border-t border-slate-200 dark:border-zinc-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-2 bg-primary rounded-lg text-white">
+                        <span class="material-symbols-outlined block">bakery_dining</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight text-primary">Sage & Grain</h2>
+                </div>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                    Creando panes artesanales y momentos de alegría desde 2012. Origen local, inspiración global.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-slate-400">Tienda</h4>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a class="hover:text-primary transition-colors" href="#">Nuestro Menú</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Boxes Semanales</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Catering</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Tarjetas de Regalo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-slate-400">Visítanos</h4>
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <p class="font-bold">Panadería Centro</p>
+                        <p class="text-slate-500">123 Wheat Lane, Portland OR</p>
+                    </div>
+                    <div>
+                        <p class="font-bold">La Tostaduría</p>
+                        <p class="text-slate-500">456 Bean St, Portland OR</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-slate-400">Contacto</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-center gap-3 text-slate-500">
+                        <span class="material-symbols-outlined text-sm">call</span>
+                        (555) 123-4567
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-500">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                        hola@sageandgrain.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-slate-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+            <p>© 2024 Panadería Sage & Grain. Todos los derechos reservados.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-primary" href="#">Política de Privacidad</a>
+                <a class="hover:text-primary" href="#">Términos de Servicio</a>
+                <a class="hover:text-primary" href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

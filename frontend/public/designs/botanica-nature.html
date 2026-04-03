@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Botanica | Naturaleza Pura para tu Piel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1e2e25", // Verde Bosque Profundo
+                        "accent": "#ec5b13", // Acento
+                        "neutral-beige": "#e1d5bb", // Beige Claro
+                        "neutral-offwhite": "#e4e9ea", // Blanco Roto
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1e2e25",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<!-- Encabezado / Navegación -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-primary/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-neutral-beige text-3xl">eco</span>
+<h2 class="text-2xl font-bold tracking-tight text-primary dark:text-neutral-beige">Botanica</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Tienda</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Sostenibilidad</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="#">Ingredientes</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-accent rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Sección Hero -->
+<section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="Primer plano de flores blancas delicadas con iluminación suave" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMz3jz6psRNeo9JR8qnNigrjkKN3UUhc2o4Feuu_M3PVtK8xf67Nltrii25NUNbGAes9urp4KbC22ngdRXW4uy5awSeR15oR9hydA1dvOX7qGw66HnWZNseNxWKBB6rwb7Jrwcf7FGvj1QEMrWLiyZQyRK1RLNFAto0AB3ZhNDvOsQ9bm5VhYrkEgBU5J1gMiRkP9Gm9e3OpAOQRf-ivti8N2vBeSZAg8Pru1kflXFGChUWIOSu6bfu4mnTCeVivWBZHteYdYPRWnZ');">
+<div class="absolute inset-0 bg-primary/20 backdrop-brightness-90"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<span class="inline-block px-4 py-1 mb-6 border border-white/40 text-white rounded-full text-xs tracking-widest uppercase font-semibold backdrop-blur-sm">Orgánico &amp; Sostenible</span>
+<h1 class="text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-tight">Naturaleza Pura para tu Piel</h1>
+<p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    Vive la esencia del lujo botánico con nuestra colección de cuidado de la piel de calidad premium, obtenida de forma ética y diseñada para tu brillo natural.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-white hover:bg-primary/90 rounded-none transition-all font-bold tracking-wide">
+                        COMPRAR COLECCIÓN
+                    </button>
+<button class="w-full sm:w-auto px-8 py-4 bg-white/10 text-white border border-white/30 hover:bg-white/20 backdrop-blur-md rounded-none transition-all font-bold tracking-wide">
+                        NUESTRA HISTORIA
+                    </button>
+</div>
+</div>
+</section>
+<!-- Valores de Marca -->
+<section class="py-24 bg-neutral-offwhite dark:bg-primary/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl text-primary mb-8">El Estándar Botanica</h2>
+<p class="text-slate-600 leading-relaxed text-lg mb-12">
+                            Creemos en la belleza sin compromisos. Nuestras formulaciones combinan la sabiduría botánica ancestral con la ciencia dermatológica moderna para ofrecer resultados que respetan tanto tu piel como el planeta.
+                        </p>
+<div class="grid sm:grid-cols-3 gap-8">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-accent text-3xl">potted_plant</span>
+<h3 class="text-xl font-bold text-primary">100% Natural</h3>
+<p class="text-sm text-slate-500">Solo ingredientes puros de origen vegetal.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-accent text-3xl">cruelty_free</span>
+<h3 class="text-xl font-bold text-primary">Libre de Crueldad</h3>
+<p class="text-sm text-slate-500">Certificación vegana Leaping Bunny.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-accent text-3xl">recycling</span>
+<h3 class="text-xl font-bold text-primary">Ecológico</h3>
+<p class="text-sm text-slate-500">Envases de vidrio libre de plásticos.</p>
+</div>
+</div>
+</div>
+<div class="relative aspect-square">
+<div class="absolute inset-4 border border-primary/10"></div>
+<img alt="Productos de rutina de cuidado de la piel en fondo minimalista" class="w-full h-full object-cover" data-alt="Frascos de vidrio para el cuidado de la piel dispuestos sobre una superficie minimalista beige" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe9mimb8ejFj_I_zSB5xbk2o1RCBO-1LiMOyanxXtweyYgelBbwLsmZJAThnPAPVXiSqILP2jBSjs6p_FnFe3nyva5thv_HSBdAFVvh7jQoudl3gPNugMpImug4m22B-_E_a7XLW5SltcavRIURi9NoJRO4xcMqXZN8WTn3S05H4GDas6dwOfEhn8vtKp_8R89q4bDDIz85Wa2BHNztXep63jrnYwQS-wzvM2Zj9XcdDyF1i5B6wS5-zKqwQdGSX6MDza72SJpN9EQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Vitrina de Productos -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-accent font-bold tracking-widest text-xs uppercase mb-2 block">Nuestros Favoritos</span>
+<h2 class="text-4xl md:text-5xl text-primary">Esenciales Insignia</h2>
+</div>
+<a class="text-primary font-bold border-b-2 border-accent pb-1 hover:text-accent transition-colors" href="#">Ver Todos los Productos</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Producto 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-neutral-beige/30 mb-6">
+<img alt="Frasco de Crema Velvet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Tarro de crema facial de lujo sobre superficie de piedra texturizada" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Z5rTJDun08o8yADpNgtdLGBhXOHA3JH9sXDBzZiFyp1HTllvvdf8DQYPyJJbptDSdOgQM2KuAplJ9jc3SPYI1EutUb-gCo2vPeM5p_bOufBuQue_v9IkiFruuazwGtCqfzMWdzCLSnSouHOn3ha8bdkfDRewKMBN91trDlsMYVrH4UqwdoBKJsZXjl-yCQrhhEQWixs27kj5wum7aZcohbcAdbn8B4jry8OwGO8JNd__WJzHoNDwGVduHW_d0nzIWwb7ZyO5oCK1"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm py-3 text-primary text-xs font-bold tracking-widest translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                AGREGAR RÁPIDO
+                            </button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-primary mb-1">Crema Facial Velvet</h3>
+<p class="text-slate-500 text-sm italic">Hidratante &amp; Reparadora</p>
+</div>
+<span class="text-lg font-medium text-primary">$48.00</span>
+</div>
+</div>
+<!-- Producto 2 -->
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-neutral-beige/30 mb-6">
+<img alt="Frasco de Aceite Luminous" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Frasco de aceite facial dorado con gotero entre hojas verdes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8NINeR4BvhiIaX6HS83yCLwOQGpZ2gGf7rAhoPfMZ2exxQ6-novNcfpp9M4ofHy3zKr76kOuCiKXF4_GUvtkCWXl5gE8Yd8TcacOfO0sT86WipGw7irYlr6W025Yr2Zr1vg5Ubs9Tt_xXBSKdYbOaxZGBDonz1lyliZYwHyp9Joeeofsijuz0KR8ijrceRp0VUj279m0gavwhDwicDNTFQpAbAKTLnZBM21YirDkTEWDIyLcrFjRFMFTVyLqgmWCnVNRLvsOtZaIj"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm py-3 text-primary text-xs font-bold tracking-widest translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                AGREGAR RÁPIDO
+                            </button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-primary mb-1">Aceite Facial Luminous</h3>
+<p class="text-slate-500 text-sm italic">Brillo &amp; Radiancia</p>
+</div>
+<span class="text-lg font-medium text-primary">$56.00</span>
+</div>
+</div>
+<!-- Producto 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] overflow-hidden bg-neutral-beige/30 mb-6">
+<img alt="Frasco de Bruma Floral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Frasco de bruma de vidrio con extractos botánicos y gotas de agua" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWAA-548kOOPnYMXFtG1qazDUTUJ7D5DGRkqceNafn5baqPfXBdaa_iEbqAjMo0oFS-zYw4HSibEiDNMaj-Z1rBb6pPPnM8KqHCEEvlFXPAdTas5hjug9lY_cRT3cmoEMPprd_pR0e4_iZbmZYuAyqQNohCL3XkGZYxuTZmRIHxcfku2sHK8jVevgu-BCr2ViusAh7Ap5R5lvCRo38TF8RKr5hTRn73geVJFt64nM_xO6b1aqNec7D88oAlLdj2aSNdhSSCsIB79Vf"/>
+<button class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm py-3 text-primary text-xs font-bold tracking-widest translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                AGREGAR RÁPIDO
+                            </button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-primary mb-1">Bruma Tónica Floral</h3>
+<p class="text-slate-500 text-sm italic">Refrescante &amp; Hidratante</p>
+</div>
+<span class="text-lg font-medium text-primary">$32.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección Ingredientes -->
+<section class="py-24 bg-primary text-neutral-offwhite">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<h2 class="text-4xl md:text-5xl mb-6 text-neutral-beige">Arraigados en la Naturaleza</h2>
+<p class="text-neutral-offwhite/70">
+                        Obtenemos nuestros ingredientes de granjas orgánicas a pequeña escala que priorizan la biodiversidad y la salud del suelo. Sin fragancias sintéticas, parabenos ni sulfatos.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="space-y-4">
+<div class="w-20 h-20 mx-auto rounded-full border border-neutral-beige/20 flex items-center justify-center text-neutral-beige">
+<span class="material-symbols-outlined text-4xl">water_drop</span>
+</div>
+<h4 class="text-lg font-bold tracking-widest uppercase">Aceite de Rosa Mosqueta</h4>
+<p class="text-sm text-neutral-beige/50">Fuente de Vitamina C para la renovación de la piel.</p>
+</div>
+<div class="space-y-4">
+<div class="w-20 h-20 mx-auto rounded-full border border-neutral-beige/20 flex items-center justify-center text-neutral-beige">
+<span class="material-symbols-outlined text-4xl">local_florist</span>
+</div>
+<h4 class="text-lg font-bold tracking-widest uppercase">Caléndula</h4>
+<p class="text-sm text-neutral-beige/50">Pétalos calmantes para aliviar la irritación.</p>
+</div>
+<div class="space-y-4">
+<div class="w-20 h-20 mx-auto rounded-full border border-neutral-beige/20 flex items-center justify-center text-neutral-beige">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h4 class="text-lg font-bold tracking-widest uppercase">Aloe Vera</h4>
+<p class="text-sm text-neutral-beige/50">Hidratación pura directamente de la hoja.</p>
+</div>
+<div class="space-y-4">
+<div class="w-20 h-20 mx-auto rounded-full border border-neutral-beige/20 flex items-center justify-center text-neutral-beige">
+<span class="material-symbols-outlined text-4xl">compost</span>
+</div>
+<h4 class="text-lg font-bold tracking-widest uppercase">Té Verde</h4>
+<p class="text-sm text-neutral-beige/50">Potentes antioxidantes para protección diaria.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Encabezado de Pie -->
+<section class="py-24 bg-neutral-beige">
+<div class="max-w-3xl mx-auto px-6 text-center">
+<h2 class="text-3xl md:text-4xl text-primary mb-6">Únete al Colectivo Botánico</h2>
+<p class="text-primary/70 mb-10">Recibe consejos de expertos y un 15% de descuento en tu primera compra.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-6 py-4 bg-white/50 border border-primary/10 focus:outline-none focus:ring-2 focus:ring-accent/50 rounded-none placeholder:text-primary/40" placeholder="Correo Electrónico" type="email"/>
+<button class="px-10 py-4 bg-primary text-white font-bold tracking-widest hover:bg-primary/90 transition-colors rounded-none">SUSCRIBIRSE</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Pie de Página -->
+<footer class="bg-primary text-neutral-offwhite py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-neutral-beige text-3xl">eco</span>
+<h2 class="text-2xl font-bold tracking-tight text-neutral-beige">Botanica</h2>
+</div>
+<p class="text-neutral-beige/60 text-sm leading-relaxed">
+                        Redefiniendo la belleza a través de los ingredientes más potentes de la naturaleza. Obtenidos éticamente, probados científicamente.
+                    </p>
+</div>
+<div>
+<h5 class="text-sm font-bold tracking-widest uppercase mb-6 text-neutral-beige">Enlaces Rápidos</h5>
+<ul class="space-y-3 text-sm text-neutral-beige/60">
+<li><a class="hover:text-white transition-colors" href="#">Comprar Todo</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Sets de Regalo</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Más Vendidos</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Novedades</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-sm font-bold tracking-widest uppercase mb-6 text-neutral-beige">Soporte</h5>
+<ul class="space-y-3 text-sm text-neutral-beige/60">
+<li><a class="hover:text-white transition-colors" href="#">Envíos y Devoluciones</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Glosario de Ingredientes</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contacto</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Política de Privacidad</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-sm font-bold tracking-widest uppercase mb-6 text-neutral-beige">Síguenos</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-neutral-beige/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-neutral-beige/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera_alt</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-neutral-beige/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-beige/40">
+<p>© 2024 Botanica Skin Care. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<span>Hecho a mano en Vermont</span>
+<span>Certificación de Plástico Negativo</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
