@@ -1,26 +1,58 @@
 services:
+  # ── Reverse Proxy (Traefik) ────────────────────────────────────────────────
+  traefik:
+    image: traefik:v2.11
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      - "--api.insecure=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      # Redireccion global HTTP -> HTTPS
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      # Configuracion Let's Encrypt
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=${ACME_EMAIL:-tu@email.com}"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "traefik-certs:/letsencrypt"
+    networks:
+      - portafolio-net
+
   # ── Backend (Go API) ──────────────────────────────────────────────────────
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: tomasspe/portafolio-backend:latest
     container_name: portafolio-backend
     restart: unless-stopped
     environment:
       PORT: "8080"
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
       JWT_SECRET: ${JWT_SECRET:-portafolio-secret-change-in-production}
-      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      FRONTEND_URL: ${FRONTEND_URL:-https://${DOMAIN}}
       DB_PATH: /app/data/portafolio.db
     volumes:
       # Volumen persistente para la base de datos SQLite
       - db_data:/app/data
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
+    labels:
+      - "traefik.enable=true"
+      # Enrutamiento para las peticiones que empiecen con /api
+      - "traefik.http.routers.backend.rule=Host(`${DOMAIN}`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.backend.entrypoints=websecure"
+      - "traefik.http.routers.backend.tls.certresolver=myresolver"
+      - "traefik.http.services.backend.loadbalancer.server.port=8080"
     networks:
       - portafolio-net
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/api/categories || exit 1"]
+      test: [ "CMD-SHELL", "wget -qO- http://localhost:8080/api/categories || exit 1" ]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -28,19 +60,20 @@ services:
 
   # ── Frontend (Next.js) ────────────────────────────────────────────────────
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-      args:
-        # La URL que usa el navegador del usuario final para llamar a la API.
-        # En producción, cámbiala por tu dominio real (ej: https://api.tudominio.com)
-        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8080}
+    image: tomasspe/portafolio-frontend:latest
     container_name: portafolio-frontend
     restart: unless-stopped
     environment:
       NODE_ENV: production
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
+    labels:
+      - "traefik.enable=true"
+      # Todo lo que no sea /api va al frontend
+      - "traefik.http.routers.frontend.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.tls.certresolver=myresolver"
+      - "traefik.http.services.frontend.loadbalancer.server.port=3000"
     depends_on:
       backend:
         condition: service_healthy
@@ -49,6 +82,8 @@ services:
 
 volumes:
   db_data:
+    driver: local
+  traefik-certs:
     driver: local
 
 networks:
