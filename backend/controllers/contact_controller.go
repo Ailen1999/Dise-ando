@@ -57,6 +57,7 @@ func sendEmail(req ContactRequest) error {
 	smtpPort := getenvOrDefault("SMTP_PORT", "587")
 	smtpUser := os.Getenv("SMTP_USER")
 	smtpPass := os.Getenv("SMTP_PASS")
+	smtpFrom := os.Getenv("SMTP_FROM")
 	toAddr := getenvOrDefault("CONTACT_TO", "ailenvera2021@gmail.com")
 
 	if smtpUser == "" || smtpPass == "" {
@@ -70,11 +71,11 @@ func sendEmail(req ContactRequest) error {
 
 	msg := []byte(fmt.Sprintf(
 		"To: %s\r\nFrom: Studio 99 <%s>\r\nReply-To: %s\r\nSubject: %s\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n%s",
-		toAddr, smtpUser, req.Email, subject, body,
+		toAddr, smtpFrom, req.Email, subject, body,
 	))
 
 	addr := fmt.Sprintf("%s:%s", smtpHost, smtpPort)
-	return smtp.SendMail(addr, auth, smtpUser, []string{toAddr}, msg)
+	return smtp.SendMail(addr, auth, smtpFrom, []string{toAddr}, msg)
 }
 
 func buildEmailBody(req ContactRequest) string {
