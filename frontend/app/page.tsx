@@ -95,6 +95,11 @@ export default function Home() {
     }
 
     const handleTouchMove = (e: TouchEvent) => {
+      // If the touch target is inside a scrollable container, let native scroll work
+      const target = e.target as HTMLElement
+      const scrollableParent = target.closest('[data-scrollable]')
+      if (scrollableParent) return
+
       if (Math.abs(e.touches[0].clientY - touchStartY.current) > 10) {
         e.preventDefault()
       }
@@ -105,6 +110,11 @@ export default function Home() {
       const touchEndX = e.changedTouches[0].clientX
       const deltaY = touchStartY.current - touchEndY
       const deltaX = touchStartX.current - touchEndX
+
+      // Don't navigate sections if touch ended inside a scrollable container
+      const target = e.target as HTMLElement
+      const scrollableParent = target.closest('[data-scrollable]')
+      if (scrollableParent) return
 
       if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
         if (deltaY > 0 && currentSection < 4) {
@@ -253,7 +263,7 @@ export default function Home() {
             className="logo-shimmer"
             style={{
               fontFamily: "var(--font-barlow)",
-              fontSize: "2.2rem",
+              fontSize: "clamp(1.4rem, 5vw, 2.2rem)",
               fontWeight: 700,
               fontStyle: "italic",
               letterSpacing: "0.05em",
@@ -299,7 +309,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative flex h-screen w-screen shrink-0 flex-col overflow-hidden px-6 pb-8 md:px-12 md:pb-16">
           {/* Spacer navbar */}
-          <div className="h-16 md:h-20 shrink-0" />
+          <div className="h-20 md:h-24 shrink-0" />
 
           {/* Contenido centrado verticalmente */}
           <div className="flex flex-1 flex-col justify-center max-w-4xl">

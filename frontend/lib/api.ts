@@ -5,6 +5,22 @@
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
 
+/**
+ * Resolves a cover/image URL returned by the API.
+ * - Absolute URLs (http/https) are returned as-is.
+ * - Relative paths like "/covers/..." are served from the Next.js frontend,
+ *   so we prefix them with the frontend origin.
+ */
+export function resolveImageUrl(url: string | null | undefined): string {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  // Relative path → served by Next.js static public folder
+  if (typeof window !== "undefined") {
+    return `${window.location.origin}${url}`;
+  }
+  return url;
+}
+
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 export interface Category {
@@ -100,6 +116,19 @@ export async function getDesigns(categoryId?: number): Promise<Design[]> {
 
 export async function getProjects(): Promise<Project[]> {
   const res = await fetch(`${API_BASE}/api/projects`);
+  return handleResponse(res);
+}
+
+export async function sendContactEmail(data: {
+  name: string;
+  email: string;
+  message: string;
+}): Promise<void> {
+  const res = await fetch(`${API_BASE}/api/contact`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
   return handleResponse(res);
 }
 

@@ -7,7 +7,7 @@ import { CatalogNav } from "@/components/catalog-nav"
 import { CustomCursor } from "@/components/custom-cursor"
 import { CategoryCard } from "@/components/category-card"
 import { ArrowLeft } from "lucide-react"
-import { getCategories, getDesigns, type Category, type Design } from "@/lib/api"
+import { getCategories, getDesigns, type Category, type Design, resolveImageUrl } from "@/lib/api"
 
 export default function DesignsCatalog() {
   const [categories, setCategories] = useState<Category[]>([])
@@ -74,7 +74,6 @@ export default function DesignsCatalog() {
                     return (
                       <CategoryCard
                         key={cat.id}
-                        suppressHydrationWarning
                         category={String(cat.id)}
                         title={cat.title}
                         image={cat.image_url}
@@ -127,7 +126,7 @@ export default function DesignsCatalog() {
                         <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-white/5">
                           {design.image_url ? (
                             <img
-                              src={design.image_url}
+                              src={resolveImageUrl(design.image_url)}
                               alt={design.title}
                               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
@@ -169,7 +168,10 @@ export default function DesignsCatalog() {
                         className="group"
                       >
                         {hasLink ? (
-                          <a href={design.html_path} target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
+                          <a
+                            href={`/designs/view?path=${encodeURIComponent(design.html_path)}&title=${encodeURIComponent(design.title)}`}
+                            className="block focus:outline-none"
+                          >
                             {content}
                           </a>
                         ) : (

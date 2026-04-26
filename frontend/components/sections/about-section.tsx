@@ -8,9 +8,15 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start flex-col justify-center px-6 pt-20 pb-8 md:px-12 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start flex-col overflow-hidden px-6 pb-8 md:px-12 lg:px-16"
     >
-      <div className="mx-auto w-full max-w-7xl flex flex-col h-full justify-center gap-10 md:gap-16">
+      {/* Navbar spacer */}
+      <div className="h-20 md:h-24 shrink-0" />
+
+      <div className="mx-auto w-full max-w-7xl flex flex-1 flex-col gap-8 md:gap-16 min-h-0 overflow-y-auto md:overflow-y-hidden md:justify-center"
+        data-scrollable
+        style={{ scrollbarWidth: "none" }}
+      >
 
         {/* Header */}
         <div
@@ -63,8 +69,6 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                   className={`flex items-baseline gap-4 border-l border-foreground/30 pl-5 transition-all duration-700 md:gap-6 md:pl-8 ${getRevealClass()}`}
                   style={{
                     transitionDelay: `${300 + i * 150}ms`,
-                    marginLeft: i % 2 === 0 ? "0" : "auto",
-                    maxWidth: i % 2 === 0 ? "100%" : "85%",
                   }}
                 >
                   <div className="text-3xl font-light text-foreground md:text-5xl lg:text-6xl">{stat.value}</div>

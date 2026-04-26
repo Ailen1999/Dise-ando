@@ -1,33 +1,49 @@
 "use client"
 
-import { Mail, MapPin } from "lucide-react"
 import { useReveal } from "@/hooks/use-reveal"
 import { useState, type FormEvent } from "react"
 import { MagneticButton } from "@/components/magnetic-button"
+import { sendContactEmail } from "@/lib/api"
 
 export function ContactSection() {
   const { ref, isVisible } = useReveal(0.3)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState("")
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) return
+
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setSubmitSuccess(true)
-    setFormData({ name: "", email: "", message: "" })
-    setTimeout(() => setSubmitSuccess(false), 5000)
+    setSubmitError("")
+
+    try {
+      await sendContactEmail(formData)
+      setSubmitSuccess(true)
+      setFormData({ name: "", email: "", message: "" })
+      setTimeout(() => setSubmitSuccess(false), 6000)
+    } catch (err: unknown) {
+      setSubmitError(
+        err instanceof Error
+          ? err.message
+          : "No se pudo enviar el mensaje. Intentá de nuevo."
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start flex-col justify-center px-6 pt-20 pb-8 md:px-12 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start flex-col overflow-hidden px-6 pb-8 md:px-12 lg:px-16"
     >
-      <div className="mx-auto w-full max-w-4xl flex flex-col h-full justify-center gap-10 md:gap-14">
+      {/* Navbar spacer */}
+      <div className="h-20 md:h-24 shrink-0" />
+
+      <div className="mx-auto w-full max-w-4xl flex flex-1 flex-col justify-center gap-8 md:gap-12 min-h-0">
 
         {/* Header */}
         <div
@@ -43,7 +59,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        {/* Form — full width, 3 columns on desktop */}
+        {/* Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <div className="grid gap-6 md:grid-cols-2">
             <div
@@ -107,12 +123,20 @@ export function ContactSection() {
             <MagneticButton
               variant="primary"
               size="lg"
-              className="w-full disabled:opacity-50"
+              className={`w-full ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {isSubmitting ? "Enviando..." : "Enviar mensaje"}
             </MagneticButton>
+
             {submitSuccess && (
-              <p className="mt-3 text-center font-mono text-sm text-foreground/80">¡Mensaje enviado correctamente!</p>
+              <p className="mt-3 text-center font-mono text-sm text-foreground/80">
+                ✓ ¡Mensaje enviado! Te respondo a la brevedad.
+              </p>
+            )}
+            {submitError && (
+              <p className="mt-3 text-center font-mono text-sm text-red-400/80">
+                ✗ {submitError}
+              </p>
             )}
           </div>
         </form>

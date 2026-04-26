@@ -8,25 +8,31 @@ export function ServicesSection() {
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start flex-col justify-center px-6 pt-20 pb-8 md:px-12 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start flex-col overflow-hidden px-6 pb-4 md:pb-8 md:px-12 lg:px-16"
     >
-      <div className="mx-auto w-full max-w-7xl flex flex-col h-full justify-center gap-10 md:gap-14">
+      {/* Navbar spacer */}
+      <div className="h-20 md:h-24 shrink-0" />
+
+      <div className="mx-auto w-full max-w-7xl flex flex-1 flex-col gap-5 md:gap-14 min-h-0 overflow-y-auto md:overflow-y-hidden md:justify-center"
+        data-scrollable
+        style={{ scrollbarWidth: "none" }}
+      >
         {/* Header */}
         <div
-          className={`transition-all duration-700 ${
+          className={`shrink-0 transition-all duration-700 ${
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
           }`}
         >
-          <h2 className="mb-2 font-sans text-4xl font-light tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="mb-1 font-sans text-3xl font-light tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Servicios
           </h2>
-          <p className="font-mono text-xs text-foreground/60 uppercase tracking-widest md:text-sm">
+          <p className="font-mono text-[10px] text-foreground/60 uppercase tracking-widest md:text-sm">
             Lo que podemos desarrollar para tu proyecto
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-20 md:gap-y-10 lg:gap-x-32">
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-x-20 md:gap-y-10 lg:gap-x-32 pb-4">
           {[
             {
               title: "Desarrollo Web",
@@ -86,16 +92,16 @@ function ServiceCard({
 
   return (
     <div
-      className={`group transition-all duration-700 border-t border-foreground/15 pt-6 ${getRevealClass()}`}
+      className={`group transition-all duration-700 border-t border-foreground/15 pt-4 md:pt-6 ${getRevealClass()}`}
       style={{
         transitionDelay: `${index * 150}ms`,
       }}
     >
-      <div className="mb-3 flex items-center gap-3">
+      <div className="mb-2 flex items-center gap-3">
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
         <span className="font-mono text-xs text-foreground/50">0{index + 1}</span>
       </div>
-      <h3 className="mb-2 font-sans text-xl font-light text-foreground md:text-2xl lg:text-3xl">{service.title}</h3>
+      <h3 className="mb-1 font-sans text-lg font-light text-foreground md:text-2xl lg:text-3xl">{service.title}</h3>
       <p className="max-w-sm text-sm leading-relaxed text-foreground/75 md:text-base">{service.description}</p>
     </div>
   )
