@@ -1,0 +1,56 @@
+services:
+  # ── Backend (Go API) ──────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: portafolio-backend
+    restart: unless-stopped
+    environment:
+      PORT: "8080"
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
+      JWT_SECRET: ${JWT_SECRET:-portafolio-secret-change-in-production}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      DB_PATH: /app/data/portafolio.db
+    volumes:
+      # Volumen persistente para la base de datos SQLite
+      - db_data:/app/data
+    ports:
+      - "8080:8080"
+    networks:
+      - portafolio-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/api/categories || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ── Frontend (Next.js) ────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # La URL que usa el navegador del usuario final para llamar a la API.
+        # En producción, cámbiala por tu dominio real (ej: https://api.tudominio.com)
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8080}
+    container_name: portafolio-frontend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - portafolio-net
+
+volumes:
+  db_data:
+    driver: local
+
+networks:
+  portafolio-net:
+    driver: bridge
