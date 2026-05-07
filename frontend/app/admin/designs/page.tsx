@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { adminGetDesigns, adminGetCategories, adminDeleteDesign, type Design, type Category } from "@/lib/api"
+import { adminGetDesigns, adminGetCategories, adminDeleteDesign, type Design, type Category, resolveImageUrl } from "@/lib/api"
 
 export default function DesignsPage() {
   const [designs, setDesigns] = useState<Design[]>([])
@@ -91,7 +91,7 @@ export default function DesignsPage() {
               <div className="relative h-36 bg-white/5">
                 {design.image_url ? (
                   <img
-                    src={design.image_url}
+                    src={resolveImageUrl(design.image_url)}
                     alt={design.title}
                     className="w-full h-full object-cover"
                   />

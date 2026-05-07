@@ -37,6 +37,12 @@ services:
       JWT_SECRET: ${JWT_SECRET:-portafolio-secret-change-in-production}
       FRONTEND_URL: ${FRONTEND_URL:-https://${DOMAIN}}
       DB_PATH: /app/data/portafolio.db
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USER: ${SMTP_USER}
+      SMTP_PASS: ${SMTP_PASS}
+      SMTP_FROM: ${SMTP_FROM}
+      CONTACT_TO: ${CONTACT_TO}
     volumes:
       # Volumen persistente para la base de datos SQLite
       - db_data:/app/data

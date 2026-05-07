@@ -31,6 +31,7 @@ func Setup(db *sql.DB) *http.ServeMux {
 	mux.HandleFunc("/api/categories", catCtrl.GetAll)
 	mux.HandleFunc("/api/designs", designCtrl.GetAll)
 	mux.HandleFunc("/api/projects", projectCtrl.GetAll)
+	mux.HandleFunc("/api/contact", controllers.Contact)
 
 	// ── Admin Auth ───────────────────────────────────────────────────────────
 	mux.HandleFunc("/api/admin/login", controllers.Login)

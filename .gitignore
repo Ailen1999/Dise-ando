@@ -1,1 +1,13 @@
+# Variables de entorno
 .env
+.env.*
+!.env.example
+
+# Base de datos local
+data/
+backend/data/
+*.db
+*.db-journal
+
+# Binarios de Go
+backend/portafolio-backend

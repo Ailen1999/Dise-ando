@@ -9,9 +9,15 @@ export function WorkSection() {
   return (
     <section
       ref={ref}
-      className="relative flex h-screen w-screen shrink-0 snap-start flex-col overflow-hidden font-sans text-white px-6 pt-20 md:pt-24 md:px-12 lg:px-24"
+      className="relative flex h-screen w-screen shrink-0 snap-start flex-col overflow-hidden font-sans text-white px-6 md:px-12 lg:px-24"
     >
-      <div className="flex w-full max-w-[1400px] mx-auto h-full flex-col justify-center gap-4 md:gap-6 pb-6 md:pb-8">
+      {/* Navbar spacer */}
+      <div className="h-20 md:h-24 shrink-0" />
+
+      <div className="flex w-full max-w-[1400px] mx-auto flex-1 flex-col gap-4 md:gap-6 pb-6 md:pb-8 min-h-0 overflow-y-auto md:overflow-y-hidden md:justify-center"
+        data-scrollable
+        style={{ scrollbarWidth: "none" }}
+      >
 
         {/* Intro Section */}
         <div
@@ -28,7 +34,7 @@ export function WorkSection() {
         </div>
 
         {/* Projects Grid Container */}
-        <div className="flex w-full gap-4 sm:gap-6 md:gap-12 lg:gap-16 flex-1 min-h-0 items-end">
+        <div className="flex w-full gap-4 sm:gap-6 md:gap-12 lg:gap-16 flex-1 min-h-0 items-center md:items-end">
 
           {/* Project 1 */}
           <article
