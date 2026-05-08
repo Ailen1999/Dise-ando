@@ -8,10 +8,10 @@ export function CustomCursor() {
   const positionRef = useRef({ x: 0, y: 0 })
   const targetPositionRef = useRef({ x: 0, y: 0 })
   const isPointerRef = useRef(false)
+  const isAnimatingRef = useRef(false)
+  const animationFrameIdRef = useRef<number>(0)
 
   useEffect(() => {
-    let animationFrameId: number
-
     const lerp = (start: number, end: number, factor: number) => {
       return start + (end - start) * factor
     }
@@ -28,7 +28,22 @@ export function CustomCursor() {
         innerRef.current.style.transform = `translate3d(${positionRef.current.x}px, ${positionRef.current.y}px, 0) translate(-50%, -50%) scale(${innerScale})`
       }
 
-      animationFrameId = requestAnimationFrame(updateCursor)
+      // Stop the loop when the cursor has converged (less than 0.5px difference)
+      const dx = Math.abs(positionRef.current.x - targetPositionRef.current.x)
+      const dy = Math.abs(positionRef.current.y - targetPositionRef.current.y)
+      if (dx < 0.5 && dy < 0.5) {
+        isAnimatingRef.current = false
+        return
+      }
+
+      animationFrameIdRef.current = requestAnimationFrame(updateCursor)
+    }
+
+    const startAnimation = () => {
+      if (!isAnimatingRef.current) {
+        isAnimatingRef.current = true
+        animationFrameIdRef.current = requestAnimationFrame(updateCursor)
+      }
     }
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -38,14 +53,15 @@ export function CustomCursor() {
       isPointerRef.current =
         target instanceof HTMLElement &&
         (window.getComputedStyle(target).cursor === "pointer" || target.tagName === "BUTTON" || target.tagName === "A")
+
+      startAnimation()
     }
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true })
-    animationFrameId = requestAnimationFrame(updateCursor)
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
-      cancelAnimationFrame(animationFrameId)
+      cancelAnimationFrame(animationFrameIdRef.current)
     }
   }, [])
 

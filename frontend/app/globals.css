@@ -128,21 +128,13 @@
   [data-scroll-container] {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
   }
 
   section {
-    transform: translateZ(0);
-    will-change: transform;
     contain: layout style paint;
   }
 
-  button {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
+
 }
 
 @keyframes logo-shimmer {
