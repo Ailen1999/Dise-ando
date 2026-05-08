@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Database files
 *.db
 *.db-journal
@@ -10,3 +11,18 @@
 # OS files
 .DS_Store
 Thumbs.db
+=======
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Base de datos local
+data/
+backend/data/
+*.db
+*.db-journal
+
+# Binarios de Go
+backend/portafolio-backend
+>>>>>>> 4a5ed855d12e6539959c4bbe6b824873c4a02038
