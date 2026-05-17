@@ -37,10 +37,38 @@ export function WebglBackground() {
     }
   }, [])
 
+  // Dispatch a synthetic mousemove at screen center after load
+  // so ChromaFlow initializes with the blue color without requiring user interaction
+  useEffect(() => {
+    if (!isLoaded) return
+    const timer = setTimeout(() => {
+      const cx = window.innerWidth / 2
+      const cy = window.innerHeight / 2
+      const initMove = new MouseEvent("mousemove", {
+        bubbles: true,
+        cancelable: true,
+        clientX: cx,
+        clientY: cy,
+      })
+      window.dispatchEvent(initMove)
+      // Also nudge slightly after a beat so the animation transitions in
+      setTimeout(() => {
+        const nudge = new MouseEvent("mousemove", {
+          bubbles: true,
+          cancelable: true,
+          clientX: cx + 1,
+          clientY: cy - 1,
+        })
+        window.dispatchEvent(nudge)
+      }, 100)
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [isLoaded])
+
   return (
     <div
       ref={shaderContainerRef}
-      className={`fixed inset-0 z-0 transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}
+      className={`fixed inset-0 z-[-1] transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}
       style={{ contain: "strict" }}
     >
       <Shader className="h-full w-full">

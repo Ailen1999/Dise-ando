@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { WebglBackground } from "@/components/webgl-background"
 import { CatalogNav } from "@/components/catalog-nav"
 import { CustomCursor } from "@/components/custom-cursor"
 import { CategoryCard } from "@/components/category-card"
@@ -39,7 +38,6 @@ export default function DesignsCatalog() {
 
   return (
     <main className="relative min-h-screen w-full bg-background font-sans text-white overflow-x-hidden">
-      <WebglBackground />
       <CustomCursor />
       <CatalogNav />
 

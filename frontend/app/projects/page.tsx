@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { WebglBackground } from "@/components/webgl-background"
 import { CatalogNav } from "@/components/catalog-nav"
 import { CustomCursor } from "@/components/custom-cursor"
 import { getProjects, type Project } from "@/lib/api"
@@ -18,7 +17,6 @@ export default function ProjectsCatalog() {
 
   return (
     <main className="relative min-h-screen w-full bg-background font-sans text-white">
-      <WebglBackground />
       <CustomCursor />
       <CatalogNav />
       

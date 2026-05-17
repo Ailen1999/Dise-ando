@@ -1,6 +1,5 @@
 "use client"
 
-import { Shader, ChromaFlow, Swirl } from "shaders/react"
 import { CustomCursor } from "@/components/custom-cursor"
 import { GrainOverlay } from "@/components/grain-overlay"
 import { WorkSection } from "@/components/sections/work-section"
@@ -16,66 +15,15 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
   const touchStartY = useRef(0)
   const touchStartX = useRef(0)
-  const shaderContainerRef = useRef<HTMLDivElement>(null)
   const scrollThrottleRef = useRef<number | undefined>(undefined)
 
   useEffect(() => {
-    const checkShaderReady = () => {
-      if (shaderContainerRef.current) {
-        const canvas = shaderContainerRef.current.querySelector("canvas")
-        if (canvas && canvas.width > 0 && canvas.height > 0) {
-          setIsLoaded(true)
-          return true
-        }
-      }
-      return false
-    }
-
-    if (checkShaderReady()) return
-
-    const intervalId = setInterval(() => {
-      if (checkShaderReady()) {
-        clearInterval(intervalId)
-      }
-    }, 100)
-
-    const fallbackTimer = setTimeout(() => {
-      setIsLoaded(true)
-    }, 1500)
-
-    return () => {
-      clearInterval(intervalId)
-      clearTimeout(fallbackTimer)
-    }
-  }, [])
-
-  // Dispatch a synthetic mousemove at screen center after load
-  // so ChromaFlow initializes with the blue color without requiring user interaction
-  useEffect(() => {
-    if (!isLoaded) return
+    // Fade in the UI shortly after mount (the shader is now handled globally)
     const timer = setTimeout(() => {
-      const cx = window.innerWidth / 2
-      const cy = window.innerHeight / 2
-      const initMove = new MouseEvent("mousemove", {
-        bubbles: true,
-        cancelable: true,
-        clientX: cx,
-        clientY: cy,
-      })
-      window.dispatchEvent(initMove)
-      // Also nudge slightly after a beat so the animation transitions in
-      setTimeout(() => {
-        const nudge = new MouseEvent("mousemove", {
-          bubbles: true,
-          cancelable: true,
-          clientX: cx + 1,
-          clientY: cy - 1,
-        })
-        window.dispatchEvent(nudge)
-      }, 100)
-    }, 300)
+      setIsLoaded(true)
+    }, 100)
     return () => clearTimeout(timer)
-  }, [isLoaded])
+  }, [])
 
   const scrollToSection = (index: number) => {
     if (scrollContainerRef.current) {
@@ -214,41 +162,6 @@ export default function Home() {
     <main className="relative h-screen w-full overflow-hidden bg-background">
       <CustomCursor />
       <GrainOverlay />
-
-      <div
-        ref={shaderContainerRef}
-        className={`fixed inset-0 z-0 transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}
-        style={{ contain: "strict" }}
-      >
-        <Shader className="h-full w-full">
-          <Swirl
-            colorA="#1275d8"
-            colorB="#e19136"
-            speed={0.8}
-            detail={0.8}
-            blend={50}
-            coarseX={40}
-            coarseY={40}
-            mediumX={40}
-            mediumY={40}
-            fineX={40}
-            fineY={40}
-          />
-          <ChromaFlow
-            baseColor="#0066ff"
-            upColor="#0066ff"
-            downColor="#d1d1d1"
-            leftColor="#e19136"
-            rightColor="#e19136"
-            intensity={0.9}
-            radius={1.8}
-            momentum={25}
-            maskType="alpha"
-            opacity={0.97}
-          />
-        </Shader>
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
 
       <nav
         className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-6 transition-opacity duration-700 md:px-12 ${
