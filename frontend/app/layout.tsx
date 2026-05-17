@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${barlow.variable}`}>
+      <body className={`font-sans antialiased bg-background ${barlow.variable}`}>
         <WebglBackground />
         {children}
       </body>

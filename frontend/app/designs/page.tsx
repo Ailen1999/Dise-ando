@@ -37,7 +37,7 @@ export default function DesignsCatalog() {
   }
 
   return (
-    <main className="relative min-h-screen w-full bg-background font-sans text-white overflow-x-hidden">
+    <main className="relative min-h-screen w-full font-sans text-white overflow-x-hidden">
       <CustomCursor />
       <CatalogNav />
 

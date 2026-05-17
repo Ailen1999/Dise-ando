@@ -17,8 +17,8 @@ export function CustomCursor() {
     }
 
     const updateCursor = () => {
-      positionRef.current.x = lerp(positionRef.current.x, targetPositionRef.current.x, 0.15)
-      positionRef.current.y = lerp(positionRef.current.y, targetPositionRef.current.y, 0.15)
+      positionRef.current.x = lerp(positionRef.current.x, targetPositionRef.current.x, 0.5)
+      positionRef.current.y = lerp(positionRef.current.y, targetPositionRef.current.y, 0.5)
 
       if (outerRef.current && innerRef.current) {
         const scale = isPointerRef.current ? 1.5 : 1

@@ -16,7 +16,7 @@ export default function ProjectsCatalog() {
   }, [])
 
   return (
-    <main className="relative min-h-screen w-full bg-background font-sans text-white">
+    <main className="relative min-h-screen w-full font-sans text-white">
       <CustomCursor />
       <CatalogNav />
       
